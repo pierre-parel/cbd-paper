@@ -1,0 +1,26 @@
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A quadrilateral image example.}}{25}{figure.caption.15}%
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {E.1}{\ignorespaces A quadrilateral image example.}}{87}{figure.caption.40}%
+\contentsline {figure}{\numberline {E.2}{\ignorespaces Figures on top of each other. See List.~\ref {lst:figsontop} for the corresponding \LaTeX \ code. }}{89}{figure.caption.42}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces A sub-figure in the top row.}}{89}{figure.caption.42}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces A sub-figure in the middle row.}}{89}{figure.caption.42}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces A sub-figure in the bottom row.}}{89}{figure.caption.42}%
+\contentsline {figure}{\numberline {E.3}{\ignorespaces Four figures in each corner. See List.~\ref {lst:fourfigs} for the corresponding \LaTeX \ code.}}{91}{figure.caption.44}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces A sub-figure in the upper-left corner.}}{91}{figure.caption.44}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces A sub-figure in the upper-right corner.}}{91}{figure.caption.44}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces A sub-figure in the lower-left corner.}}{91}{figure.caption.44}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces A sub-figure in the lower-right corner}}{91}{figure.caption.44}%
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsfinish 
