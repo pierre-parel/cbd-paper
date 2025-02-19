@@ -1,13 +1,3 @@
-Put an overview of the contents of chapter. Mention here your methodology flow through a figure and provide an overview of it and how your methodology achieves your objectives.  How your methodology achieves each of your specific objectives is what your panelists/examiners will be looking for.  Specify how your methodology achieves your general objective and specific objectives.  A point-by-point comparison how your methodology achieves each of your specific objectives is expected in the final \documentType.
-
-Also make sure that you refer clearly to the chapters on the Literature Review, Theoretical Considerations, and Design Considerations showing how your methodology ties with those that you have discussed in those chapters.
-
-Make an overview of the contents of the chapter. Put here your methodology flow through a figure and provide an overview of it.  
-
-
-In summative form, Table~\ref{tab:methods_per_objective} indicates the approaches, designs, modes, processes, programs, techniques, and/or ways that the \documentType reaches the objectives. 
-
-
 \begin{center}
 	{\scriptsize
 		\begin{tabularx}{\textwidth}{p{0.2\textwidth}|p{0.6\textwidth}|p{0.1\textwidth}}
@@ -57,34 +47,39 @@ In summative form, Table~\ref{tab:methods_per_objective} indicates the approache
 	}
 \end{center}
 
+\section{Research Design}
 
+\section{Data Collection}
+\section{Data Analysis}
 
-
-\section{Implementation}
+\section{System/Prototype Development}
 \label{sec:implement}
 
-Summarize the process used to create/set-up the work with an explanation of such process, instruments, and materials that you used if any. If the description is lengthy, use condensed bullet points. 
+\includegraphics[width=0.6\textwidth]{figure/placeholder.png} 
 
-\noindent \textit{Rule of thumb}: Implementation is how you made your  work; (keywords: implemented, created, made, soldered, programmed, etc.).
+The proposed system is a two-staged automated green coffeee bean sorting machine, integrating both machine vision and density analysis. Firstly, the coffee beans are introduced into the system through a funnel, which directs them to a conveyor belt mechanism.  In the first stage, the green coffee beans will be sorted depending on their visual characteristics. In this stage, the physical qualities of the bean is analyzed such as size, color, and defect. If the bean is defective, the system will automatically sort it out. Then, all the non-defective beans will go through the second stage of the system. In the second stage, there will be an IR sensor and a weighing scale. The IR sensor will help the system to calculate for the estimated volume of the bean. The volume and mass of the bean in hand, the density of the bean can be calculated. Depending on the density threshold and size threshold set by the user, the bean will be classified whether it is good or not.
 
-If you wrote a program or made a simulation, you must state how the program or simulation functions in this section.	An algorithm or a pseudocode as shown in Table~\ref{tab:calcxn} is a good example.
+\includegraphics[width=0.6\textwidth]{figure/placeholder.png} 
 
+Figure below shows the schematic diagram of the proposed system. Arduino Uno microcontroller magaes all the mechanical components such as the servo motor, stepper motors, and the converyor belt. The servo motor controls the  roitating mechanism for bean sorting. On the other hand, the stepper motors operate a slide mechanism to direct the beans. Two cameras, integrated with OpenCV via Python, handle machine vision algorithms, and image processing for defect detection of the beans. A ToF10120 sensor provides precise distance measurement. A precision weighing scale measures the density of each bean for classification. The Arduino communicates with the OpenCV system through serial communication, ensuring smooth coordination.
 
-\graytx{\Blindtext}
+\includegraphics[width=0.6\textwidth]{figure/placeholder.png} 
 
-
+Figure below shows the design overview of the system. Beans are first arranged through a hopper and a conveyor belt. On top of the conveyor belt, a 3D-printed guide is attached for the beans to maintain a linear formation. Then, the beans are expected to fall into another funnel attached to a tube. The tube is directly attached to a rotating mechanism that allows the beans to be inspected and sorted one-by-one. In this stage, defective beans are sorted out. Then, the non-defective beans are transferred onto the precision scale to analyze the density. The less-dense beans are sorted out of the batch.
 
 \section{Evaluation}
 \label{sec:evaluate}
 
-Describe the procedures for evaluating the correct behavior and outcome of your  work, including what information you need to gather and how you will obtain or measure it.  
+For the testing procedures, processed but unsorted green coffee beans will be acquired from a local farmer. These coffee beans will be sorted manually based on their different defects and quality, and also will be fed into the automated system to compare accuracy and performance. In line with the Philippine National Standard  or PNS (2022) for testing green coffee bean sorters, three test trials will be conducted. These trials will be conducted under similar operational settinsg to ensure consistency. The duration of each trial begins when the beans are fed into the system’s hopper and endsd after no beans remain in the system. During these trials, the system’s ability to sort defective beans and categorize the good beans by density will be monitored.
+To create the dataset, coffee beans will be arranged on a sheet of paper and photo of the entire sheet will be taken. A program using YOLOv8 will then be used to process this image, detecting each bean, creating bounding boxes, and crop them into separate image files for labeling. Additionally, an alternative method involves using the system itself to collect data, with cameras capturing the top and bottom of the beans as they pass through the system. These approaches aim to ensure to create a diverse dataset that will be used for training the machine learning model.
 
-\textit{Rule of thumb}: Evaluation is how you tested your  work; (keywords: measured, tested, compared, simulated, etc.).
-
-\graytx{\Blindtext}
-
-
-
+In evaluating the system’s performance, various metrics, as dictated by the PNS for Green Coffee Bean Sorters, will be considered: 
+\begin{itemize}
+	\item \textbf{Sorting Accuracy}. The system’s sorting accuracy will be verified by comparing the output of the system to the manually sorted output of the same batch of beans.
+	\item \textbf{Duration of Tests}. The total operating time for each trial will be recorded.
+	\item \textbf{Sorting Yield}. The quantity and quality of the beans sorted in each trial will be measured to assess the system.
+\end{itemize}
+\section{Limitations}
 \section{Summary}
 
 Provide the gist of this chapter such that it reflects the contents and the message.
