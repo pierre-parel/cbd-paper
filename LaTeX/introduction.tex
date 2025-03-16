@@ -11,19 +11,22 @@ Identifying and sorting specialty-grade coffee beans can be strenuous since the 
 
 \begin{center}
     \begin{longtable}{| p{4cm} | p{10cm} |}
+	\caption{Summary of the Literature Review}
+	\label{summary_literature_review}
+	\endfirsthead
+	\endhead
     \hline
-	\caption{Summary of the Literature Review} 	
-    Existing Literature \& Description \\ \hline
-    Defect Detection \& The existing literature focuses on using various machine learning models such as YOLO, KNN, and CNN to detect defects in green coffee beans, 
+    Existing Literature & Description \\ \hline
+    Defect Detection & The existing literature focuses on using various machine learning models such as YOLO, KNN, and CNN to detect defects in green coffee beans, 
 	through identifying visible defects like black spots, broken beans, discoloration, and more. These existing approaches heavily rely on visual characteristics 
 	and do not consider other key factors that affect green coffee bean quality like density, which can enhance classification accuracy. The proposed system 
 	integrates density and size analysis alongside the defecting various levels of defects on the coffee bean for a more holistic detection and classification. \\ \hline
-    Coffee Bean Grading and Quality Assessment \& The existing literature utilize algorithms such as artificial neural networks, support vector machine, and random 
+    Coffee Bean Grading and Quality Assessment & The existing literature utilize algorithms such as artificial neural networks, support vector machine, and random 
 	forest to grade and classify coffee beans according to the specified grading system. These methods primarily focus on visual features of the beans, 
 	which do not account the bean’s density and size, which are both essential factors for classifying specialty-grade coffee beans. Additionally, there is a lack of 
 	practical implementation of automated sorting systems, as these focus on simply classifying the beans. Through a two-stage process, the proposed system will 
 	take into consideration both the visual inspection and the density measurement, which leads to a more complete classification of coffee beans. \\ \hline
-    Automated Sorting and Classification System \& Research has been conducted on developing that automate the process of sorting coffee beans according to various parameters. 
+    Automated Sorting and Classification System & Research has been conducted on developing that automate the process of sorting coffee beans according to various parameters. 
 	Some studies focus on sorting defectives against non-defective, while others focus on other visual parameters like defects and roast profiles. These systems focus only on visual 
 	characteristics, without considering the actual size of the bean and its density as parameters for better classification accuracy. The proposed system will integrate the use of visual, density, and size parameters to enable a comprehensive automated sorting solution for classifying specialty-grade coffee beans. \\
     \hline
@@ -31,12 +34,14 @@ Identifying and sorting specialty-grade coffee beans can be strenuous since the 
 \end{center}
 
 \begin{center}
-	\small
-
     \begin{longtable}{| p{5cm} | p{4cm} | p{4cm} |}
-    \hline
 	\caption{Comparison Table on Existing Studies} 	
-    Proposed System \& Balay, D. D., Cabrera, R. M., Jensen, J. T. B., \& Mayuga, K. E. L. (2024). Automatic sorting of defective coffee beans through computer vision \& A. J. N. Lualhati, J. B. Mariano, A. E. L. Torres, and S. D. Fenol, “Development and Testing of Green Coffee Bean Quality Sorter using Image Processing and Artificial Neural Network  \\ \hline
+	\label{comparison_table_existing_studies}
+	\endfirsthead
+	\endhead
+    \hline
+	% TODO: FIX CITATIONS HERE
+    Proposed System & Balay, D. D., Cabrera, R. M., Jensen, J. T. B., and Mayuga, K. E. L. (2024). Automatic sorting of defective coffee beans through computer vision & A. J. N. Lualhati, J. B. Mariano, A. E. L. Torres, and S. D. Fenol, “Development and Testing of Green Coffee Bean Quality Sorter using Image Processing and Artificial Neural Network  \\ \hline
     
 	\begin{itemize}
 		\item Defect sorting using EfficientNetV2. 
@@ -71,8 +76,7 @@ The Philippine coffee industry is a growing market, however it is stuck with usi
 
 \section{Objectives and Deliverables}
 
-Your objectives are the states that you desire to achieve in solving the problem. The general objective is the main state to be achieved whereas the specific ones are sub-states to be achieved.
-
+% TODO: UPDATE BASED ON NEW OBJECTIVES
 \subsection{General Objective (GO)}
  \Copy{GO}{GO: To develop an automated (Arabica) green coffee bean sorter that identifies good, less-dense and defective beans from an unsorted batch of coffee beans. The system will utilize machine vision and density-based analysis for defect detection and classification of the coffee beans, ensuring efficient coffee bean sorting.};
 
