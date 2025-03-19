@@ -1,5 +1,5 @@
-*.aux
-*.log
-*.lof
-*.lol
-*.out
+LateX/*.aux
+LaTeX/*.log
+LaTeX/*.lof
+LaTeX/*.lol
+LaTeX/*.out
