@@ -60,85 +60,85 @@
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Methodology}}{53}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Description of the System}{56}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Research Design}{59}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Dataset Collection}{59}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Dataset Collection and Model Training}{60}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Utilization of Open-Source Database}{61}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}First Iteration of Dataset Collection}{62}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Second Iteration of Dataset Collection}{64}{subsection.5.3.4}%
-\contentsline {section}{\numberline {5.4}Density Threshold Calibration Using Water Displacement Method}{65}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Dataset Preparation and Model Training}{66}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Dataset Splitting}{66}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Image Annotation}{66}{subsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.5.3}Dataset Augmentation Techniques}{67}{subsection.5.5.3}%
-\contentsline {subsection}{\numberline {5.5.4}Model Evaluation}{67}{subsection.5.5.4}%
-\contentsline {subsection}{\numberline {5.5.5}Model Benchmarking and Selection}{69}{subsection.5.5.5}%
-\contentsline {section}{\numberline {5.6}Hardware Development}{69}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Screw Feeder}{70}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Rotating Conveyor Table}{71}{subsection.5.6.2}%
-\contentsline {subsection}{\numberline {5.6.3}Inspection Tray}{74}{subsection.5.6.3}%
-\contentsline {subsection}{\numberline {5.6.4}Density Sorter}{75}{subsection.5.6.4}%
-\contentsline {section}{\numberline {5.7}Hardware and Software Integration}{76}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Serial Communication}{76}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Recommended Standard 232 (RS-232)}{77}{subsection.5.7.2}%
-\contentsline {section}{\numberline {5.8}Prototype Setup}{79}{section.5.8}%
-\contentsline {subsection}{\numberline {5.8.1}Actual Setup}{79}{subsection.5.8.1}%
-\contentsline {subsection}{\numberline {5.8.2}Lighting Setup for Inspection Tray}{81}{subsection.5.8.2}%
-\contentsline {subsection}{\numberline {5.8.3}System Operation}{85}{subsection.5.8.3}%
-\contentsline {section}{\numberline {5.9}Prototype Testing}{87}{section.5.9}%
-\contentsline {subsection}{\numberline {5.9.1}Sorting Speed}{87}{subsection.5.9.1}%
-\contentsline {subsection}{\numberline {5.9.2}Defect Sorting Accuracy}{88}{subsection.5.9.2}%
-\contentsline {subsection}{\numberline {5.9.3}Density Sorting Accuracy}{90}{subsection.5.9.3}%
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Results and Discussions}}{91}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Description of the New Custom Dataset}{95}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Performance of Classification Models on Custom Dataset}{96}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}EfficientNetV2S}{97}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}YOLOv8}{99}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}YOLOv11-cls}{101}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}YOLOv12-cls}{103}{subsection.6.2.4}%
-\contentsline {section}{\numberline {6.3}Actual Performance of Trained Models in the System}{104}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Sorting Speed}{107}{section.6.4}%
-\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{Conclusions, Recommendations, and Future Directives}}{109}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Concluding Remarks}{110}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Contributions}{110}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Recommendations}{111}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Future Prospects}{111}{section.7.4}%
-\contentsline {chapter}{References}{112}{chapter*.63}%
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Student Research Ethics Clearance}}{115}{appendix.A}%
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Answers to Questions to this Thesis}}{117}{appendix.B}%
-\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase []{Revisions to the Proposal}}{120}{appendix.C}%
-\contentsline {appendix}{\chapternumberline {D}\MakeTextUppercase []{Revisions to the Final}}{126}{appendix.D}%
-\contentsline {appendix}{\chapternumberline {E}\MakeTextUppercase []{Usage Examples}}{130}{appendix.E}%
-\contentsline {section}{\numberline {E1}Equations}{131}{section.E.1}%
-\contentsline {section}{\numberline {E2}Notations}{133}{section.E.2}%
-\contentsline {subsection}{\numberline {E2.1}Math alphabets}{133}{subsection.E.2.1}%
-\contentsline {subsection}{\numberline {E2.2}Vector symbols}{133}{subsection.E.2.2}%
-\contentsline {subsection}{\numberline {E2.3}Matrix symbols}{133}{subsection.E.2.3}%
-\contentsline {subsection}{\numberline {E2.4}Tensor symbols}{134}{subsection.E.2.4}%
-\contentsline {subsection}{\numberline {E2.5}Bold math version}{135}{subsection.E.2.5}%
-\contentsline {subsubsection}{\numberline {E2.5.1}Vector symbols}{135}{subsubsection.E.2.5.1}%
-\contentsline {subsubsection}{\numberline {E2.5.2}Matrix symbols}{135}{subsubsection.E.2.5.2}%
-\contentsline {subsubsection}{\numberline {E2.5.3}Tensor symbols}{135}{subsubsection.E.2.5.3}%
-\contentsline {section}{\numberline {E3}Abbreviation}{139}{section.E.3}%
-\contentsline {section}{\numberline {E4}Glossary}{141}{section.E.4}%
-\contentsline {section}{\numberline {E5}Figure}{143}{section.E.5}%
-\contentsline {section}{\numberline {E6}Table}{149}{section.E.6}%
-\contentsline {section}{\numberline {E7}Algorithm or Pseudocode Listing}{153}{section.E.7}%
-\contentsline {section}{\numberline {E8}Program/Code Listing}{155}{section.E.8}%
-\contentsline {section}{\numberline {E9}Referencing}{157}{section.E.9}%
-\contentsline {subsection}{\numberline {E9.1}A subsection}{158}{subsection.E.9.1}%
-\contentsline {subsubsection}{\numberline {E9.1.1}A sub-subsection}{159}{subsubsection.E.9.1.1}%
-\contentsline {section}{\numberline {E10}Citing}{160}{section.E.10}%
-\contentsline {subsection}{\numberline {E10.1}Books}{160}{subsection.E.10.1}%
-\contentsline {subsection}{\numberline {E10.2}Booklets}{162}{subsection.E.10.2}%
-\contentsline {subsection}{\numberline {E10.3}Proceedings}{162}{subsection.E.10.3}%
-\contentsline {subsection}{\numberline {E10.4}In books}{162}{subsection.E.10.4}%
-\contentsline {subsection}{\numberline {E10.5}In proceedings}{163}{subsection.E.10.5}%
-\contentsline {subsection}{\numberline {E10.6}Journals}{163}{subsection.E.10.6}%
-\contentsline {subsection}{\numberline {E10.7}Theses/dissertations}{165}{subsection.E.10.7}%
-\contentsline {subsection}{\numberline {E10.8}Technical Reports and Others}{165}{subsection.E.10.8}%
-\contentsline {subsection}{\numberline {E10.9}Miscellaneous}{166}{subsection.E.10.9}%
-\contentsline {section}{\numberline {E11}Index}{167}{section.E.11}%
-\contentsline {section}{\numberline {E12}Adding Relevant PDF Pages}{168}{section.E.12}%
-\contentsline {appendix}{\chapternumberline {F}\MakeTextUppercase []{Vita}}{172}{appendix.F}%
-\contentsline {appendix}{\chapternumberline {G}\MakeTextUppercase []{Article Paper(s)}}{174}{appendix.G}%
+\contentsline {section}{\numberline {5.3}Dataset Collection}{60}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Dataset Collection and Model Training}{61}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Utilization of Open-Source Database}{62}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}First Iteration of Dataset Collection}{63}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Second Iteration of Dataset Collection}{65}{subsection.5.3.4}%
+\contentsline {section}{\numberline {5.4}Density Threshold Calibration Using Water Displacement Method}{66}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Dataset Preparation and Model Training}{67}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Dataset Splitting}{67}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Image Annotation}{67}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Dataset Augmentation Techniques}{68}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}Model Evaluation}{68}{subsection.5.5.4}%
+\contentsline {subsection}{\numberline {5.5.5}Model Benchmarking and Selection}{70}{subsection.5.5.5}%
+\contentsline {section}{\numberline {5.6}Hardware Development}{70}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Screw Feeder}{71}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Rotating Conveyor Table}{72}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Inspection Tray}{75}{subsection.5.6.3}%
+\contentsline {subsection}{\numberline {5.6.4}Density Sorter}{76}{subsection.5.6.4}%
+\contentsline {section}{\numberline {5.7}Hardware and Software Integration}{77}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Serial Communication}{77}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Recommended Standard 232 (RS-232)}{78}{subsection.5.7.2}%
+\contentsline {section}{\numberline {5.8}Prototype Setup}{80}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Actual Setup}{80}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Lighting Setup for Inspection Tray}{82}{subsection.5.8.2}%
+\contentsline {subsection}{\numberline {5.8.3}System Operation}{86}{subsection.5.8.3}%
+\contentsline {section}{\numberline {5.9}Prototype Testing}{88}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Sorting Speed}{88}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Defect Sorting Accuracy}{89}{subsection.5.9.2}%
+\contentsline {subsection}{\numberline {5.9.3}Density Sorting Accuracy}{91}{subsection.5.9.3}%
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Results and Discussions}}{92}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Description of the New Custom Dataset}{96}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Performance of Classification Models on Custom Dataset}{97}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}EfficientNetV2S}{98}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}YOLOv8}{100}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}YOLOv11-cls}{102}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}YOLOv12-cls}{104}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Actual Performance of Trained Models in the System}{105}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Sorting Speed}{108}{section.6.4}%
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{Conclusions, Recommendations, and Future Directives}}{110}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Concluding Remarks}{111}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Contributions}{111}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Recommendations}{112}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Future Prospects}{112}{section.7.4}%
+\contentsline {chapter}{References}{113}{chapter*.64}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Student Research Ethics Clearance}}{116}{appendix.A}%
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Answers to Questions to this Thesis}}{118}{appendix.B}%
+\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase []{Revisions to the Proposal}}{121}{appendix.C}%
+\contentsline {appendix}{\chapternumberline {D}\MakeTextUppercase []{Revisions to the Final}}{127}{appendix.D}%
+\contentsline {appendix}{\chapternumberline {E}\MakeTextUppercase []{Usage Examples}}{131}{appendix.E}%
+\contentsline {section}{\numberline {E1}Equations}{132}{section.E.1}%
+\contentsline {section}{\numberline {E2}Notations}{134}{section.E.2}%
+\contentsline {subsection}{\numberline {E2.1}Math alphabets}{134}{subsection.E.2.1}%
+\contentsline {subsection}{\numberline {E2.2}Vector symbols}{134}{subsection.E.2.2}%
+\contentsline {subsection}{\numberline {E2.3}Matrix symbols}{134}{subsection.E.2.3}%
+\contentsline {subsection}{\numberline {E2.4}Tensor symbols}{135}{subsection.E.2.4}%
+\contentsline {subsection}{\numberline {E2.5}Bold math version}{136}{subsection.E.2.5}%
+\contentsline {subsubsection}{\numberline {E2.5.1}Vector symbols}{136}{subsubsection.E.2.5.1}%
+\contentsline {subsubsection}{\numberline {E2.5.2}Matrix symbols}{136}{subsubsection.E.2.5.2}%
+\contentsline {subsubsection}{\numberline {E2.5.3}Tensor symbols}{136}{subsubsection.E.2.5.3}%
+\contentsline {section}{\numberline {E3}Abbreviation}{140}{section.E.3}%
+\contentsline {section}{\numberline {E4}Glossary}{142}{section.E.4}%
+\contentsline {section}{\numberline {E5}Figure}{144}{section.E.5}%
+\contentsline {section}{\numberline {E6}Table}{150}{section.E.6}%
+\contentsline {section}{\numberline {E7}Algorithm or Pseudocode Listing}{154}{section.E.7}%
+\contentsline {section}{\numberline {E8}Program/Code Listing}{156}{section.E.8}%
+\contentsline {section}{\numberline {E9}Referencing}{158}{section.E.9}%
+\contentsline {subsection}{\numberline {E9.1}A subsection}{159}{subsection.E.9.1}%
+\contentsline {subsubsection}{\numberline {E9.1.1}A sub-subsection}{160}{subsubsection.E.9.1.1}%
+\contentsline {section}{\numberline {E10}Citing}{161}{section.E.10}%
+\contentsline {subsection}{\numberline {E10.1}Books}{161}{subsection.E.10.1}%
+\contentsline {subsection}{\numberline {E10.2}Booklets}{163}{subsection.E.10.2}%
+\contentsline {subsection}{\numberline {E10.3}Proceedings}{163}{subsection.E.10.3}%
+\contentsline {subsection}{\numberline {E10.4}In books}{163}{subsection.E.10.4}%
+\contentsline {subsection}{\numberline {E10.5}In proceedings}{164}{subsection.E.10.5}%
+\contentsline {subsection}{\numberline {E10.6}Journals}{164}{subsection.E.10.6}%
+\contentsline {subsection}{\numberline {E10.7}Theses/dissertations}{166}{subsection.E.10.7}%
+\contentsline {subsection}{\numberline {E10.8}Technical Reports and Others}{166}{subsection.E.10.8}%
+\contentsline {subsection}{\numberline {E10.9}Miscellaneous}{167}{subsection.E.10.9}%
+\contentsline {section}{\numberline {E11}Index}{168}{section.E.11}%
+\contentsline {section}{\numberline {E12}Adding Relevant PDF Pages}{169}{section.E.12}%
+\contentsline {appendix}{\chapternumberline {F}\MakeTextUppercase []{Vita}}{173}{appendix.F}%
+\contentsline {appendix}{\chapternumberline {G}\MakeTextUppercase []{Article Paper(s)}}{175}{appendix.G}%
 \contentsfinish 
