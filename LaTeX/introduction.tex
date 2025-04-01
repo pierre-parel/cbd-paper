@@ -1,8 +1,8 @@
 \section{Background of the Study}
 
-Coffee is one of the most globally consumed beverages. It is a vital product in the global market, with production reaching 168.2 million bags in 2022-2023. The coffee industry is expected to grow even more in the coming years, with output projected to rise by 5.8\% in 2023-2024 (International Coffee Organization, 2023). In the Philippines, coffee holds a strong cultural significance, with the local industry continuously expanding. The country is the 14th largest coffee producer in the world. Locally, the industry is expected to grow at a compound annual growth rate (CAGR) of 3.5\% from 2021 to 2025, driven by small-scale farm households (Santos \& Baltazar, 2022). With a growing popularity among coffee enthusiasts, the demand for specialty coffee is increasing as well. Consumers are becoming more selective about the quality of their coffee beans (Tampon, 2023).  
+Coffee is one of the most globally consumed beverages. It is a vital product in the global market, with production reaching 168.2 million bags in 2022-2023. The coffee industry is expected to grow even more in the coming years, with output projected to rise by 5.8\% in 2023-2024 \cite{International_Coffee_Association_2023}. In the Philippines, coffee holds a strong cultural significance, with the local industry continuously expanding. The country is the 14th largest coffee producer in the world. Locally, the industry is expected to grow at a compound annual growth rate (CAGR) of 3.5\% from 2021 to 2025, driven by small-scale farm households \cite{Santos_Baltazar_2022}. With a growing popularity among coffee enthusiasts, the demand for specialty coffee is increasing as well. Consumers are becoming more selective about the quality of their coffee beans \cite{Tampon_2023}.  
 
-To stay competitive in the rapidly evolving coffee industry, farmers carefully select high-quality coffee beans for production. Grading green coffee beans is a crucial part of coffee production, as it is directly associated with the quality of the cup quality of coffee brews (Barbosa et al., 2019). Coffee grading is a process in the industry that determines the quality of coffee beans, using various parameters such as size, density, color, and defects, ensuring that only high quality beans are selected for consumption (Córdoba et al., 2021). The size of coffee beans is determined using a screen size and sorting procedure, where the coffee beans are categorized into different screen sizes, with larger beans considered higher quality (González et al., 2019). The density of a bean can be calculated by the ratio of its mass and volume, which greatly influences the roasting process and overall quality of the coffee (Datov \& Lin, 2019). Color is also another indicator for quality, with darker beans being preferred for their richer flavor profile. On the other hand, defects are classified among 3 categories: Category 1 includes the most severe issues such as foreign matter and black beans, Category 2 includes less severe defects like broken beans, and Category 3 includes minor defects like slight discoloration. Determining the quality of the coffee beans in relation to their defect values is based on quality standards and grading systems such as SCAA protocols guidance or the Philippine National Standard on Green Coffee Bean. 
+To stay competitive in the rapidly evolving coffee industry, farmers carefully select high-quality coffee beans for production. Grading green coffee beans is a crucial part of coffee production, as it is directly associated with the quality of the cup quality of coffee brews \cite{Barbosa_Scholz_Kitzberger_Benassi_2019}. Coffee grading is a process in the industry that determines the quality of coffee beans, using various parameters such as size, density, color, and defects, ensuring that only high quality beans are selected for consumption \cite{Córdoba_Moreno_Osorio_Velásquez_Fernandez-Alduenda_Ruiz-Pardo_2021}. The size of coffee beans is determined using a screen size and sorting procedure, where the coffee beans are categorized into different screen sizes, with larger beans considered higher quality \cite{González_Lopez_Taboada_Gaytán_Ramos_2019}. The density of a bean can be calculated by the ratio of its mass and volume, which greatly influences the roasting process and overall quality of the coffee \cite{Datov_Lin_2019}. Color is also another indicator for quality, with darker beans being preferred for their richer flavor profile. On the other hand, defects are classified among 3 categories: Category 1 includes the most severe issues such as foreign matter and black beans, Category 2 includes less severe defects like broken beans, and Category 3 includes minor defects like slight discoloration. Determining the quality of the coffee beans in relation to their defect values is based on quality standards and grading systems such as SCAA protocols guidance or the Philippine National Standard on Green Coffee Bean \cite{Bureau_of_Agriculture_and_Fisheries_Standards_2012}. 
 
 Traditionally, this stage of assessing and categorizing coffee beans relies on visual evaluation, which is time-consuming and labor-intensive, making it prone to human error. One of the biggest challenges in coffee bean production is ensuring consistency in quality. As the demand for specialty coffee continues to grow, there has also been an increase for the need of more efficient and accurate sorting methods. The application of modern technology can help reduce the labor costs and minimize human errors in these tasks. In recent years, computer vision was used alongside various machine learning models and techniques, such as convolutional neural networks (CNNs), support vector machines (SVMs), or K-nearest neighors (KNN) models, where the models were trained on labeled data to classify images of coffee beans into different quality categories. The proposed aims to utilize this technology to develop a two-stage automated coffee bean sorting system using machine vision and density-based analysis to categorize and identify and segregate specialty-grade green coffee beans from non-specialty and defective coffee beans. 
 
@@ -34,6 +34,7 @@ Identifying and sorting specialty-grade coffee beans can be strenuous since the 
 \end{center}
 
 \begin{center}
+	\scriptsize{
     \begin{longtable}{| p{5cm} | p{4cm} | p{4cm} |}
 	\caption{Comparison Table on Existing Studies} 	
 	\label{comparison_table_existing_studies}
@@ -41,7 +42,7 @@ Identifying and sorting specialty-grade coffee beans can be strenuous since the 
 	\endhead
     \hline
 	% TODO: FIX CITATIONS HERE
-    Proposed System & Balay, D. D., Cabrera, R. M., Jensen, J. T. B., and Mayuga, K. E. L. (2024). Automatic sorting of defective coffee beans through computer vision & A. J. N. Lualhati, J. B. Mariano, A. E. L. Torres, and S. D. Fenol, “Development and Testing of Green Coffee Bean Quality Sorter using Image Processing and Artificial Neural Network  \\ \hline
+    Proposed System & \cite{Balay_Cabrera_Jensen_Mayuga_2024} & \cite{Lualhati_Mariano_Torres_Fenol_2022} \\ \hline
     
 	\begin{itemize}
 		\item Defect sorting using EfficientNetV2. 
@@ -69,10 +70,11 @@ Identifying and sorting specialty-grade coffee beans can be strenuous since the 
 	\\
 	\hline
     \end{longtable}
+	}
 \end{center}
 
 \section{Problem Statement}
-The Philippine coffee industry is a growing market, however it is stuck with using traditional methods in sorting green coffee beans. Often relying on manually sorting the beans, it exposes a number of problems that are apparent in the industry. Relying on manual sorting increases production cost which results in higher prices for quality coffee beans. To make the Philippine coffee beans more competitive to the exported beans, reducing the price is crucial. Another problem that is encountered in manual sorting heavily focuses only on the physical attributes of the bean like size and appearance. There are standards that need to be met, which forces the farmers to resort to manual sorting to comply with the standards of the SCAA. The SCAA standards require a 300g batch of green coffee beans must not contain any defects and the size consistency of the beans must not exceed 5\% variance. Another reason why coffee processors still opt to do manual sorting is because there are no commercially available and reliable GCB sorting machines (Lualhati et al., 2022). There is a need for a coffee sorter that is able to efficiently and accurately sort GCB. Coffee bean selection is carried out either manually, which is a costly and unreliable process (Santos, 2020). The manual sorting process limits scalability and quality control, putting the strain on farmers as coffee shop owners' demands for high-quality coffee continue to rise (Lualhati et al., 2022).   	 	 
+The Philippine coffee industry is a growing market, however it is stuck with using traditional methods in sorting green coffee beans. Often relying on manually sorting the beans, it exposes a number of problems that are apparent in the industry. Relying on manual sorting increases production cost which results in higher prices for quality coffee beans. To make the Philippine coffee beans more competitive to the exported beans, reducing the price is crucial. Another problem that is encountered in manual sorting heavily focuses only on the physical attributes of the bean like size and appearance. There are standards that need to be met, which forces the farmers to resort to manual sorting to comply with the standards of the SCAA. The SCAA standards require a 300g batch of green coffee beans must not contain any defects and the size consistency of the beans must not exceed 5\% variance. Another reason why coffee processors still opt to do manual sorting is because there are no commercially available and reliable GCB sorting machines \cite{Lualhati_Mariano_Torres_Fenol_2022}. There is a need for a coffee sorter that is able to efficiently and accurately sort GCB. Coffee bean selection is carried out either manually, which is a costly and unreliable process \cite{Santos_Rosas_Martins_Araújo_Viana_Gonçalves_2020}. The manual sorting process limits scalability and quality control, putting the strain on farmers as coffee shop owners' demands for high-quality coffee continue to rise \cite{Lualhati_Mariano_Torres_Fenol_2022}.   	 	 
 
 \section{Objectives and Deliverables}
 
@@ -83,9 +85,9 @@ The Philippine coffee industry is a growing market, however it is stuck with usi
 \subsection{Specific Objectives (SOs)}
 
 \begin{itemize}
-	\item \Copy{SO1}{SO1: To gather and create a dataset consisting of 500 high-resolution images per classification of Arabica green coffee beans (dense, less-dense, defective (category 1 \& 2))};
+	\item \Copy{SO1}{SO1: To gather and create a dataset consisting of 500 high-resolution images of good Arabica green coffee beans and 200 high-resolution images per classification of defective beans (Category 1 \& Category 2).};
 	
-	\item \Copy{SO2}{SO2: To improve the synchronization between the machine vision system and the embedded sorting mechanism, ensuring defect sorting of at least 20 beans per minute, solving issues such as non-synchronization of the system};
+	\item \Copy{SO2}{SO2: To improve the synchronization between the machine vision system and the embedded sorting mechanism, ensuring defect sorting of at least 20 beans per minute for stage one, solving issues such as non-synchronization of the system.};
 	
 	\item \Copy{SO3}{SO3: To achieve an accuracy of at least 85\% in classifying defective green coffee beans using computer vision};
 	
@@ -96,11 +98,11 @@ The Philippine coffee industry is a growing market, however it is stuck with usi
 
 \subsection{Expected Deliverables}
 
-Table~\ref{tab:expected_deliverables} shows the outputs, products, results, achievements, gains, realizations, and/or
+Table ~\ref{tab:expected_deliverables} shows the outputs, products, results, achievements, gains, realizations, and/or
 yields of the \documentType. 
 
 
-\begin{table}[!htbp]
+\begin{table}[H]
 	\caption{Expected Deliverables per Objective} 	
 	\label{tab:expected_deliverables} 
 	{\centering \scriptsize

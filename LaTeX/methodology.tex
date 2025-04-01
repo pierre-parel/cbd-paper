@@ -26,122 +26,525 @@
 			\hline
 			
 			
-			\Paste{GO} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement}\\ \hline
+			\Paste{GO} & 
+
+			\begin{itemize}
+				\item DDR Methodology
+				\item Description of the System
+			\end{itemize}
+			
+			& Sec.~\ref{sec:description_system} on p.~\pageref{sec:description_system} 
+
+			Sec.~\ref{sec:research_design} on p.~\pageref{sec:research_design}
+			\\ \hline
+			
+			\Paste{SO1} & 
+			\begin{itemize}
+				\item Dataset Collection
+				\item Manual Sorting
+			\end{itemize} & 
+			
+			Sec.~\ref{sec:dataset_collection} on p.~\pageref{sec:dataset_collection} \\ \hline
 			
 			
-			\Paste{SO1} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement} \\ \hline
+			\Paste{SO2} & 
+
+			\begin{itemize}
+				\item Data Collection
+				\item Dataset preprocessing
+				\item Model Training
+				\item Serial Communication
+			\end{itemize} 
+	
+			& Sec.~\ref{sec:dataset_collection} on p.~\pageref{sec:dataset_collection}
+			
+			Sec.~\ref{sec:dataset_prep_and_model_training} on p.~\pageref{sec:dataset_prep_and_model_training}\\ \hline
+
+			Sec.~\ref{sec:serial_communication} on p.~\pageref{sec:serial_communication}
+			
+			\Paste{SO3} & 
+			\begin{itemize}
+				\item Dataset preprocessing
+				\item Model Training
+			\end{itemize} 
+			& Sec.~\ref{sec:dataset_prep_and_model_training} on p.~\pageref{sec:dataset_prep_and_model_training}\\ \hline
 			
 			
-			\Paste{SO2} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement}\\ \hline
+			\Paste{SO4} &
+			\begin{itemize}
+				\item Density Threshold Calibration Using Water Displacement Method
+				\item Density Sorter
+			\end{itemize}
+			& Sec.~\ref{sec:density_threshold_calibration} on p.~\pageref{sec:density_threshold_calibration}
 			
-			
-			\Paste{SO3} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement}\\ \hline
-			
-			
-			\Paste{SO4} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement} \\ \hline
-			
-			
-			\Paste{SO5} & \blindlist{enumerate} & Sec.~\ref{sec:implement} on p.~\pageref{sec:implement} \\ \hline
-			
+			Sec.~\ref{sec:density_sorter} on p.~\pageref{sec:density_sorter} \\ \hline
+						
 		\end{tabularx}
 	}
 \end{center}
 
-\section{Research Design}
-% TODO: Write content
-
-\section{Data Collection}
-\subsection{Utilization of Open-Source Databases}
-% TODO: Cite Kaggle dataset
-To establish a foundation for the system's model, the group initially referenced an open-source dataset from Kaggle [x]. This dataset provides an original 500x500px images of Arabica green coffee beans categorize as defective or good. This dataset also provided insights into how individual beans were captured, including factors such as lighting, camera positioning, focus, and resolution. By analyzing the dataset, the group gained a better understanding of how to achieve a high-quality data collection, ensuring that the collected dataset would contribute to high model accuracy when it is fed into the system.
-
-\subsection{Manual Sorting}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=6cm]{manual_sorting}
-    \caption{Manual Sorting Process}
-    \label{fig:manual_sorting}
-\end{figure}
-
-% TODO: Fix citations
-The diagram in Figure \ref{fig:manual_sorting} depicts the representation of the process of manual sorting of unsorted green coffee beans through a series of steps. First, the beans are sorted by density using methods such as floatation or shaking tables. This helps in separating the denser beans, usually pertaining to a more developed and higher quality bean. Then, the beans are sorted by size using screens and sieves with specific dimensions depending on the variety of the beans. After this, a thorough visual inspection is performed by the sorters to identify and remove the defective beans from the batch. To ensure consistency and accuracy, the group follows the Specialty Coffee Association of America (SCAA) Standards Defect Handbook, which provide documentation and guidelines for identifying and classifying defective beans [x]. Finally, the process results in the output of sorted green coffee beans, ready for further processing or sale. 
-To ensure the dataset reflects real-world conditions, the group acquired Arabica green coffee beans from Davao. These beans were manually sorted to properly classify defective characteristics before capturing images for dataset creation. This step was crucial for improving the efficiency of batch image capture and ensuring accurate model training, making the system more applicable to Philippine coffee producers.
-
-\subsection{1st Iteration: Controlled Setup}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=6cm]{data_collection_setup.png}
-    \caption{Data Collection Setup}
-    \label{fig:data_collection_setup}
-\end{figure}
-
-% TODO: Table of Pics
-
-The first iteration of data collection utilized a Sony A6300 camera with its Kit Lens, set at 1/200 Shutter Speed, 1000 ISO, and a Distance of 50mm. The beans were captured in batches of nine, carefully arranged within the camera's field of view following the rule of thirds. The rule of thirds is a photographic composition principle where an image is divided into a 3x3 grid, creating nine equal grid lines to create balance to the photo. By aligning the coffee beans with the rule of thirds, the group ensured a structured and even distribution of the beans within the frame. This setup also made it easier to automate the cropping process, as the predefined positions of the beans allowed a Python script to accurately extract individual images.
-
-\subsection{2nd Iteration: Ideal Conditions}
-
-% TODO: Table of Pics
-The second iteration focused on real-world implementation, using the system's built-in webcam to capture images directly from the inspection tray. This setup represents the ideal condition, as it replicates the actual environment where the model will operate. The images captured in this iteration directly reflect what the system will process in a practical application, allowing for better generalization and real-time adaptability.
-
 \section{Description of the System}
+\label{sec:description_system}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=6cm]{ch5/system_block_diagram.png}
+    \includegraphics[width=14cm]{ch5/system_block_diagram.png}
     \caption{System Block Diagram}
     \label{fig:system_block_diagram}
 \end{figure}
 
 The proposed system is a two-staged automated green coffeee bean sorting machine, integrating both machine vision and density analysis. Firstly, the coffee beans are introduced into the system through a funnel, which directs them to a conveyor belt mechanism.  In the first stage, the green coffee beans will be sorted depending on their visual characteristics. In this stage, the physical qualities of the bean is analyzed such as size, color, and defect. If the bean is defective, the system will automatically sort it out. Then, all the non-defective beans will go through the second stage of the system. In the second stage, there will be an IR sensor and a weighing scale. The IR sensor will help the system to calculate for the estimated volume of the bean. The volume and mass of the bean in hand, the density of the bean can be calculated. Depending on the density threshold and size threshold set by the user, the bean will be classified whether it is good or not.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=6cm]{ch5/Schematic_Diagram_of_the_System.png}
+    \includegraphics[width=14cm]{ch5/Schematic_Diagram_of_the_System.png}
     \caption{Schematic Diagram of the System}
     \label{fig:system_schematic_diagram}
 \end{figure}
 
 Figure \ref{fig:system_schematic_diagram} shows the schematic diagram of the proposed system. Arduino Uno microcontroller makes all the mechanical components such as the servo motor, stepper motors, and the conveyor belt. The servo motor controls the  rotating mechanism for bean sorting. On the other hand, the stepper motors operate a slide mechanism to direct the beans. Two cameras, integrated with OpenCV via Python, handle machine vision algorithms, and image processing for defect detection of the beans. A ToF10120 sensor provides precise distance measurement. A precision weighing scale measures the density of each bean for classification. The Arduino communicates with the OpenCV system through serial communication, ensuring smooth coordination.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=6cm]{ch5/Overview_Of_The_System.png}
+    \includegraphics[width=14cm]{ch5/Overview_Of_The_System.png}
     \caption{Design Overview of the System}
     \label{fig:system_design_overview}
 \end{figure}
 
 Figure \ref{fig:system_design_overview} shows the design overview of the system. Beans are first arranged through a hopper and a conveyor belt. On top of the conveyor belt, a 3D-printed guide is attached for the beans to maintain a linear formation. Then, the beans are expected to fall into another funnel attached to a tube. The tube is directly attached to a rotating mechanism that allows the beans to be inspected and sorted one-by-one. In this stage, defective beans are sorted out. Then, the non-defective beans are transferred onto the precision scale to analyze the density. The less-dense beans are sorted out of the batch.
 
-\section{Dataset and Model Training}
-% TODO: Fix citations.
-% ! REMOVE THE PARTS ABOUT RANDOM FOREST
-For dataset collection, Arabica green beans from a farm will be used. Each bean will be captured by a high-resolution camera under sufficient and consistent lighting. Proper lighting is crucial, as it directly affects the visibility of the bean’s physical features, minimizing shadows, grain, and other noise that could result from inconsistent illumination. The top and bottom side pictures of the beans are to be collected. In addition, defective beans of the same type and origin will be gathered to identify the different classification of defects (primary and secondary). This study focuses on defects such as Broken, Dried Cherry, Floater, Full Black, Full Sour, Fungus Damage, and Insect Damage. The dataset will include at least 500 images of good beans and a minimum of 200 images for each defect category. To expand the dataset and enhance model training, augmentation techniques such as scaling, rotation, and mirroring will be applied.
+\section{Research Design}
+\label{sec:research_design}
 
-The models to be used in this study are Convolutional Neural Network (CNN) and Random Forest. The CNN model is mostly compatible for image classification and feature extraction as it is composed of several different layers resulting in a better representation of image data (Wang et al., 2021). Thus, this model is the most ideal for green bean defect detection by identifying its texture, color, size, volume, deformations, and cracks in the first stage of sorting. Then, for the second stage where density parameter is added, Random Forest will be used. Since mixed data types are being considered (visual features extracted by CNN and density values), Random Forest is the best fit for this classification (Rigatti, 2017). In addition, the model is robust to overfitting, which means that it can handle noisy data. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{ch5/DDR_Research_Diagram_v2.png}
+    \caption{Design and Development Research (DDR) Methodology}
+    \label{fig:ddr_methodology}
+\end{figure}
 
-\section{Testing}
-\label{sec:testing_and_evaluation}
+The researchers opted for a Design and Development Research model for the research. As shown in Figure \ref{fig:ddr_methodology},  there are multiple levels that were needed in order to develop a working prototype for the system. 
 
-For the testing procedures, processed but unsorted green coffee beans will be acquired from a local farmer. These coffee beans will be sorted manually based on their different defects and quality, and also will be fed into the automated system to compare accuracy and performance. In line with the Philippine National Standard  or PNS (2022) for testing green coffee bean sorters, three test trials will be conducted. These trials will be conducted under similar operational settinsg to ensure consistency. The duration of each trial begins when the beans are fed into the system’s hopper and endsd after no beans remain in the system. During these trials, the system’s ability to sort defective beans and categorize the good beans by density will be monitored.
-To create the dataset, coffee beans will be arranged on a sheet of paper and photo of the entire sheet will be taken. A program using YOLOv8 will then be used to process this image, detecting each bean, creating bounding boxes, and crop them into separate image files for labeling. Additionally, an alternative method involves using the system itself to collect data, with cameras capturing the top and bottom of the beans as they pass through the system. These approaches aim to ensure to create a diverse dataset that will be used for training the machine learning model.
 
-In evaluating the system’s performance, various metrics, as dictated by the PNS for Green Coffee Bean Sorters, will be considered: 
+
+\section{Dataset Collection}
+\label{sec:dataset_collection}
+For dataset collection, Arabica green beans from a farm will be used. Each bean will be captured by a high-resolution camera under sufficient and consistent lighting. Proper lighting is crucial, as it directly affects the visibility of the bean’s physical features, minimizing shadows, grain, and other noise that could result from inconsistent illumination. The top and bottom side pictures of the beans are to be collected. In addition, defective beans of the same type and origin will be gathered to identify the different classification of defects (primary and secondary). This study focuses on defects such as Broken, Dried Cherry, Floater, Full Black, Full Sour, Fungus Damage, and Insect Damage. The dataset will include at least 500 images of good beans and a minimum of 200 images for each defect category. To expand the dataset and enhance model training, augmentation techniques such as scaling, rotation, and mirroring will be applied. 
+
+\subsection{Dataset Collection and Model Training}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm]{ch5/Manual_Sorting_Process.png}
+    \caption{Manual Sorting Process}
+    \label{fig:manual_sorting}
+\end{figure}
+
+% TODO: Fix citations for SCAA
+The diagram in Figure \ref{fig:manual_sorting} depicts the representation of the process of manual sorting of unsorted green coffee beans through a series of steps. First, the beans are sorted by density using methods such as floatation or shaking tables. This helps in separating the denser beans, usually pertaining to a more developed and higher quality bean. Then, the beans are sorted by size using screens and sieves with specific dimensions depending on the variety of the beans. After this, a thorough visual inspection is performed by the sorters to identify and remove the defective beans from the batch. To ensure consistency and accuracy, the group follows the Specialty Coffee Association of America (SCAA) Standards Defect Handbook, which provide documentation and guidelines for identifying and classifying defective beans. Finally, the process results in the output of sorted green coffee beans, ready for further processing or sale. 
+To ensure the dataset reflects real-world conditions, the group acquired Arabica green coffee beans from Davao. These beans were manually sorted to properly classify defective characteristics before capturing images for dataset creation. This step was crucial for improving the efficiency of batch image capture and ensuring accurate model training, making the system more applicable to Philippine coffee producers.
+
+\subsection{Utilization of Open-Source Database}
+% ! CHANGE `the group` statement, citation after Kaggle
+To establish a foundation for the system's model, the group initially referenced an open-source dataset from Kaggle. This dataset provides an original 500x500px images of Arabica green coffee beans categorize as defective or good. This dataset also provided insights into how individual beans were captured, including factors such as lighting, camera positioning, focus, and resolution. By analyzing the dataset, the group gained a better understanding of how to achieve a high-quality data collection, ensuring that the collected dataset would contribute to high model accuracy when it is fed into the system.
+
+
+\subsection{First Iteration of Dataset Collection}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm]{data_collection_setup.png}
+    \caption{First Iteration of Data Collection Setup}
+    \label{fig:data_collection_setup}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.3\textwidth]{ch5/1st-Iteration-Table/Black.JPG} &
+		\includegraphics[width=0.3\textwidth]{ch5/1st-Iteration-Table/Broken.JPG} \\
+		\textbf{Black}  & \textbf{Broken} \\[6pt]
+	\end{tabular}
+	\begin{tabular}{cc}
+		\includegraphics[width=0.3\textwidth]{ch5/1st-Iteration-Table/DriedCherry.JPG} &
+		\includegraphics[width=0.3\textwidth]{ch5/1st-Iteration-Table/Floater.JPG} \\
+		\textbf{Dried Cherry}  & \textbf{Floater} \\[6pt]
+	\end{tabular}
+	\begin{tabular}{cc}
+		\includegraphics[width=0.3\textwidth]{ch5/1st-Iteration-Table/FungusDamage.JPG} &
+		\includegraphics[width=0.3\textwidth]{ch5/1st-Iteration-Table/Good.JPG} \\
+		\textbf{Fungus Damage}  & \textbf{Good} \\[6pt]
+	\end{tabular}
+	\begin{tabular}{cc}
+		\includegraphics[width=0.3\textwidth]{ch5/1st-Iteration-Table/InsectDamage.JPG} &
+		\includegraphics[width=0.3\textwidth]{ch5/1st-Iteration-Table/Sour.JPG} \\
+		\textbf{Insect Damage}  & \textbf{Sour} \\[6pt]
+	\end{tabular}
+	\caption{Sample Images from the First Iteration of Dataset Collection}
+\end{figure}
+
+
+The first iteration of data collection utilized a Sony A6300 camera with its Kit Lens, set at 1/200 Shutter Speed, 1000 ISO, and a Distance of 50mm. The beans were captured in batches of nine, carefully arranged within the camera's field of view following the rule of thirds. The rule of thirds is a photographic composition principle where an image is divided into a 3x3 grid, creating nine equal grid lines to create balance to the photo. By aligning the coffee beans with the rule of thirds, the group ensured a structured and even distribution of the beans within the frame. This setup also made it easier to automate the cropping process, as the predefined positions of the beans allowed a Python script to accurately extract individual images.
+
+\subsection{Second Iteration of Dataset Collection}
+\begin{figure}[H]
+	\centering
+	\begin{tabular}{cc}
+		\includegraphics[width=0.3\textwidth]{ch5/2nd-Iteration-Table/Black.jpg} &
+		\includegraphics[width=0.3\textwidth]{ch5/2nd-Iteration-Table/Broken.jpg} \\
+		\textbf{Black}  & \textbf{Broken} \\[6pt]
+	\end{tabular}
+	\begin{tabular}{cc}
+		\includegraphics[width=0.3\textwidth]{ch5/2nd-Iteration-Table/DriedCherry.jpg} &
+		\includegraphics[width=0.3\textwidth]{ch5/2nd-Iteration-Table/Floater.jpg} \\
+		\textbf{Dried Cherry}  & \textbf{Floater} \\[6pt]
+	\end{tabular}
+	\begin{tabular}{cc}
+		\includegraphics[width=0.3\textwidth]{ch5/2nd-Iteration-Table/FungusDamage.jpg} &
+		\includegraphics[width=0.3\textwidth]{ch5/2nd-Iteration-Table/Good.jpg} \\
+		\textbf{Fungus Damage}  & \textbf{Good} \\[6pt]
+	\end{tabular}
+	\begin{tabular}{cc}
+		\includegraphics[width=0.3\textwidth]{ch5/2nd-Iteration-Table/InsectDamage.jpg} &
+		\includegraphics[width=0.3\textwidth]{ch5/2nd-Iteration-Table/Sour.jpg} \\
+		\textbf{Insect Damage}  & \textbf{Sour} \\[6pt]
+	\end{tabular}
+	\caption{Sample Images from the Second Iteration of Dataset Collection}
+\end{figure}
+
+The second iteration focused on real-world implementation, using the system's built-in webcam to capture images directly from the inspection tray. This setup represents the ideal condition, as it replicates the actual environment where the model will operate. The images captured in this iteration directly reflect what the system will process in a practical application, allowing for better generalization and real-time adaptability.
+
+\section{Density Threshold Calibration Using Water Displacement Method}
+\label{sec:density_threshold_calibration}
+Setting the threshold for bean density is crucial for the stage 2 sorting of the system, which involves measuring the density of each bean. In order to set a threshold for density-based classification, a calibration batch of Good quality coffee beans was chosen. The beans were confirmed to be free of defects and representative of typical specialty-grade coffee by the farmer. The threshold density was calculated by determining the average density of this batch through direct measurements of mass and volume.
+
+% TODO: INSERT FIGURE HERE
+The total volume of the batch of beans was measured by the water displacement technique, a commonly used method to measure the volume of solids that are irregularly shaped. The beans were fully immersed in a water-filled graduated cylinder, and the rise in water level was measured. The volume of water displaced is equivalent to the combined volume of the batch of beans, measured in cubic centimeters (cm³).
+
+The overall weight of the beans was determined by a high-precision digital scale (at least to 0.001 g resolution). Both the mass and volume are known, and the batch density may be calculated through the use of the standard formula for density:
+
+\[
+\text{Batch Density} = \frac{\text{Total Mass of Beans} \, (g)}{\text{Total Volume Displaced} \, (cm^3)}
+\]
+
+This computed average density served as the threshold value in the system. During automated classification, individual bean density is calculated using estimated volume (from image analysis) and actual weight (from the precision scale via RS232 communication). Beans with a density lower than the threshold are classified as less dense, while those meeting or exceeding the threshold are considered dense, indicating higher quality.
+
+
+
+\section{Dataset Preparation and Model Training}
+\label{sec:dataset_prep_and_model_training}
+\subsection{Dataset Splitting}
+
+The dataset is divided into train, validation, and test sets in a 70-20-10 ratio. The training dataset will be used for model learning, which allows it to identify patterns in the image. The validation set is used to assess the model’s performance and fine-tune the parameters of the model during training. This is an iterative process wherein the model learns from the training data and is then evaluated on and fine-tuned on the validation dataset. Finally, the test set is used for evaluating the model’s final performance, assessing its ability to generalize to new data.
+
+\subsection{Image Annotation}
+
+Roboflow Annotate was used to label images of coffee beans. The platform was used for two separate datasets: one for the detection model, the other for the classification model. In the detection dataset, bounding boxes were drawn around individual coffee beans and labeled accordingly. For the classification dataset, the trained detection model was used to crop individual coffee beans from the raw dataset, which were the categorized into the eight different classifications. Roboflow was chosen for its ability to store datasets in the cloud and its support for different annotation formats, such as COCO and YOLO, ensuring compatibility with different deep learning models during experimentation.
+
+\subsection{Dataset Augmentation Techniques}
+
+Data augmentation techniques were applied using Roboflow’s tools to improve the model generalization. Different augmentations such as rotation, flipping, blur, brightness and contrast adjustment, and noise were used to simulate variations, which helps prevent overfitting and improve the model’s ability to identify defects in different lighting conditions and orientations.
+
+\subsection{Model Evaluation}
+Each trained model will be tested on the system, with a predetermined set of beans. The results from this test are analyzed by using a confusion matrix, providing a detailed breakdown of the model’s performance for each category. The confusion matrix provides a way to interpret classification results by defining the following parameters:
 \begin{itemize}
-	\item \textbf{Sorting Accuracy}. The system’s sorting accuracy will be verified by comparing the output of the system to the manually sorted output of the same batch of beans.
-	\item \textbf{Duration of Tests}. The total operating time for each trial will be recorded.
-	\item \textbf{Sorting Yield}. The quantity and quality of the beans sorted in each trial will be measured to assess the system.
+    \item \textbf{True Positives (TP)} - The number of correctly classified instances for a specific defect type.
+    \item \textbf{False Positives (FP)} - The number of times a different category was incorrectly classified as this defect type.
+    \item \textbf{True Negatives (TN)} - All correctly classified instances excluding the defect category in question.
+    \item \textbf{False Negatives (FN)} - The number of times this defect type was classified as something else.
 \end{itemize}
 
-	The desired accuracy of the system for its defect sorting is an accuracy of at least 85\%. The paper of Lualhati et al. (2022) was able to achieve an accuracy score of 85\% for sorting out good beans and 95\% for defect sorting, with an average score of 90\% for sorting out both. However, their paper only included two types of defects (black and deformed), and good quality beans as its data set. This study aims to target 10 types of defects along with the good green coffee beans ensuring that the system can cover a wider range of defects while also matching the accuracy of the previous study. 
+Through these parameters, key performance metrics such as accuracy, precision, recall, and F1-score were computed to evaluate the system’s performance in different classifications as shown below. This test will assist in determining what types of defects the system correctly classifies and which types might need improvements in image preprocessing, dataset expansion, or optimization of the machine learning model. The outcome will be applied to optimize the sorting algorithm for minimal misclassifications to ensure greater reliability in real-world defect detection.
 
-	To validate the performance of the system, the results will be compared with those obtained during the manual sorting. This comparison will focus on determining the accuracy of the defect detection and bean classification. The manual sorting process will serve as the reference for evaluating the system’s ability to enhance sorting efficiency and accuracy.
+\begin{enumerate}
+	\item \textbf{Accuracy} measures overall correctness of the classification model
+	\begin{equation}
+	Accuracy = \frac{TP + TN}{TP + TN + FP + FN}
+	\end{equation}
 
-% TODO: Following sections
-\section{Data Analysis}
-\section{System/Prototype Development} % Can be removed?
-\section{Evaluation} % Can be removed/merged with `Testing`
-\section{Summary}
+	\item \textbf{Precision} measures how many of the predicted positive classifications were actually correct
+	\begin{equation}
+	Precision = \frac{TP}{TP + FP}
+	\end{equation}
 
-Provide the gist of this chapter such that it reflects the contents and the message.
+	\item \textbf{Recall} evaluates how well the model identifies actual positive cases
+	\begin{equation}
+	Recall = \frac{TP}{TP + FN}
+	\end{equation}
+	
+	\item \textbf{F1-score} represents the harmonic mean of precision and recall
+	\begin{equation}
+	F1\text{-}Score = 2 \times \frac{Precision \times Recall}{Precision + Recall}
+	\end{equation}
+\end{enumerate}
+
+\subsection{Model Benchmarking and Selection}
+Several models were trained and tested within the actual system to determine the most effective one. These models trained and evaluated include EfficientNetV2, YOLOv8, YOLOv11, and YOLOv12. Each model was assessed using the defined performance metrics and compared accordingly. The model with the highest overall performance will be selected for deployment in the system.
+
+
+\section{Hardware Development}
+The hardware elements of the system, two-stage automated coffee bean sorter, are developed to provide effective and precise sorting using a mix of mechanical and electronic components. Each element is designed and tested to maximize the sorting process while providing system reliability.
+
+\subsection{Screw Feeder}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=9cm]{ch5/Screw_Feeder_Design.jpg}
+    \caption{Screw Feeder 3D Design}
+    \label{fig:screw_feeder}
+\end{figure}
+Screw feeder is the most essential of the devices as it governs the beans of coffee moving into the system. It operates mostly to deliver the beans consistently in terms of volume and ensures they do not bundle up and fall into the system in heavy masses, causing beans build up on the rotating conveyor table. The feeder is driven by a 12V DC motor, and the rotation speed is regulated using PWM. Through a constant and controlled flow, the screw feeder avoids clogging and provides a consistent input into the inspection tray, enhancing overall system performance. Figure \ref{fig:screw_feeder} shows the actual 3D model design of the screw feeder used in the system. 
+
+\subsection{Rotating Conveyor Table}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=7cm]{ch5/Rotating_Conveyor_Table_Design.png}
+    \caption{Rotating Conveyor Table 3D Design}
+    \label{fig:rotating_conveyor}
+\end{figure}
+The conveyor table, as shown in Figure \ref{fig:rotating_conveyor}, rotates to move the coffee beans from the feeding mechanism to the inspection tray. The table contains aluminum guides to linearly arrange the beans prior to dropping on the inspection tray. The conveyor is powered by a 12V DC motor, which offers consistent movement and regulated speed to avoid misalignment. By incorporating a turning mechanism, the conveyor guarantees beans are well oriented prior to inspection tray entry, minimizing classification errors due to faulty positioning.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=9cm]{ch5/Rotating_Conveyor_Table_with_Aluminum_Guides.png}
+    \caption{Rotating Conveyor Table with Aluminum Guides}
+    \label{fig:rotating_conveyor_aluminum}
+\end{figure}
+As shown in Figure \ref{fig:rotating_conveyor_aluminum}, the installed aluminum guides on the rotating conveyor table ensures coffee beans to be linearly arranged. This linear arrangement of beans significantly helped the system to ensure that coffee beans are dropped onto the slide, which connects the conveyor table to the inspection try, in a one-by-one manner. In addition, the aluminum guides are also installed to keep the beans from accumulating in one area, which can cause the jamming of beans. The researchers tested the different motor speeds to observe the optimal settings that will not cause bean jamming and meet the minimum sorting speed of the system.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=9cm]{ch5/Rotating_Conveyor_Table_with_IR_Sensor.png}
+    \caption{Rotating Conveyor Table with IR Sensor}
+    \label{fig:rotating_conveyor_sensor}
+\end{figure}
+Initially, the rotating conveyor table is set at a fixed and slow speed to ensure that coffee beans are dropped into the inspection tray one-by-one. However, at this rate, the time travel time of the first bean dropped from the center of the table is very long. Thus, the group decided to add an IR sensor at the edge of the rotating table as seen in Figure \ref{fig:rotating_conveyor_sensor}. The sensor’s responsibility is to detect if there is a bean at the edge. If there is no bean detected, the rotating table is set to a higher speed to expedite the process. On the other hand, if a bean is detected by the sensor, the rotation of the table is adjusted in such a way that it is able to drop the beans one-by-one onto the inspection tray. With this sensor integrated into the system, a higher speed can be set for the rotating table, minimizing the time travel of the beans from the center to the inspection tray, resulting to a faster sorting time for the first stage. 
+
+\subsection{Inspection Tray}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{ch5/Inspection_Tray_Design.png}
+    \caption{Inspection Tray 3D Design}
+    \label{fig:inspection_tray_design}
+\end{figure}
+The inspection tray is the main component for the first-stage sorting mechanism. The inspection tray is used to support beans in a stable and constrained position for a short time, enabling the camera to take high-resolution images without motion blur. The NEMA 17 stepper motor drives the movement of the inspection tray, enabling accurate alignment with the vision system's image processing pipeline. The tray surface is created to reduce reflections and enhance contrast so that the camera can precisely detect defects like cracks, discoloration, or insect infestation. In addition, the surface is made of clear acrylic to allow a clear image for the camera positioned at the bottom of the tray. Lastly, a rotatable slider controlled by a 5V servo motor serves as the main segregator of the good beans from the defective beans. 
+
+\subsection{Density Sorter}
+\label{sec:density_sorter}
+
+% TODO: ADD FIGURE
+The density sorter is the second-stage sorting system, tasked with sorting coffee beans according to their measured density. This is achieved by initially measuring each bean's mass using a precision weighing scale and volume using the ToF10120 infrared sensor. After calculating the density, the system triggers a sorting system powered by a NEMA 17 stepper motor, which sorts beans into various collection bins according to their classification. This sorting operation is such that high-density, specialty-grade beans are kept separate from low-density, commercial-grade or defective beans. The density sorter's accuracy is verified by comparing the results of its classification to manual weighing measurements (ground truth data).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=9cm]{ch5/Precision_Scale.png}
+    \caption{Precision Scale}
+    \label{fig:precision_scale}
+\end{figure}
+The U.S. Solid Electronic Precision Balance (0.01g, 1200g capacity, RS232 port, AC/DC power) was selected for the density sorting mechanism because it is highly accurate, transmits data in real-time, and is well-calibrated. Its 0.01g precision guarantees accurate mass readings, which are critical to precise density calculations in sorting coffee beans. The RS232 port facilitates smooth integration with the microcontroller for automatic data processing and sorting decisions, minimizing manual errors. Its dual power source (AC and battery) also guarantees uninterrupted operation in different environments, making it a dependable and efficient part of the coffee bean sorting system.
+
+
+
+\section{Hardware and Software Integration}
+
+\subsection{Serial Communication}
+\label{sec:serial_communication}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{ch5/Serial_Communication_Flow_for_Stage_1_Classification.png}
+    \caption{Serial Communication Flow for Stage 1 Classification}
+    \label{fig:serial_comm_flow}
+\end{figure}
+
+The system is generally composed of hardware and software components. Hardware components are mainly responsible for collecting data from the coffee beans such as the camera and IR sensor, and the sorting mechanisms such as servo motors and stepper motors. On the other hand, the software components are the brain of the system which is mainly responsible for data processing such as image detection, defect classification of the beans, volume and density computation, and control of the mechanisms. Since the system has two major components, software and hardware, they should be integrated together for the system to be as effective. Thus, serial communication was utilized to integrate the hardware and software components of the system. Serial communication is a significant component in the system as it serves as the communication medium of the hardware and software. It enables real-time coordination between the software (YOLO-based image detection, classification, and density computation) and the hardware (running in Arduino microcontrollers). The said communication is established with the use of a USB serial interface using the pyserial library in Python. In addition, this is configured at a baud rate of 9600.
+
+
+\subsection{Recommended Standard 232 (RS-232)}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{ch5/Precision_Scale_Integration_with_RS232.png}
+    \caption{Precision Scale Integration with RS232 for Stage 2 Classification}
+    \label{fig:rs232}
+\end{figure}
+
+The stage 2 classification is mainly composed of the sorting mechanism itself, and the precision scale to measure the mass of each bean. The bounding boxes from the stage 1 classification are used to estimate each bean’s volume. Additionally, the beans depth is also estimated through the IR sensor placed in the rotating conveyor table. With these measurements, the volume of each bean, the volume can be calculated using the Tri-axial Ellipsoid’s volume formula.
+The system, specifically at the inspection tray mechanism where the YOLO detection and classification is implemented, has a function move\_stepper() responsible for sending the command from the Python code to the Arduino microcontroller. When the Arduino receive this command, it executes motor movement that allows the stepper motor to move at a certain angle that allows the camera to capture the bean. This function is crucial for the system as this is how each bean in the inspection tray is fed to the image processing side of the system. This movement rotates the mechanism holding the coffee beans, positioning the next bean beneath the top and bottom cameras for inspection. After the motor completes the movement, the Arduino will send back a message to the program running Python, signalling that the bean is ready for image capture and further processing. In addition, the Python script is continuously or constantly waiting for the Arduino’s message through the arduino.readline() function, ensuring seamless communication and faster processing. 
+
+\section{Prototype Setup}
+\subsection{Actual Setup}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=9cm]{ch5/Actual_Setup_of_the_System.jpg}
+    \caption{Actual System Setup}
+    \label{fig:actual_setup}
+\end{figure}
+
+Physical integration of the automatic coffee bean sorter system comprises various integrated parts with the purpose of enabling effective, accurate, and methodical sorting in terms of visual defects as well as density categorization. The system involves integration of mechanical, electronic, and computer vision technologies for optimizing sorting. To begin the process, coffee beans are added to a revolving conveyor table, which is the main mechanism of transport used for feeding the beans into the inspection system. The conveyor features aluminum guides positioned strategically along it to ensure linear alignment of the beans as they travel. Linear alignment is required to avoid overlap and misclassification, since individual processing by the machine vision system is necessary for each bean.Once the beans travel further along the conveyor, they are conveyed onto the inspection tray. There, they are viewed in multiple perspectives by two high-definition cameras. A two-camera imaging process ensures improved defect detection by providing a full, thorough evaluation of the surface, shape, and texture of the bean. The images are then processed with a deep learning-based classification algorithm that classifies each bean as either defective or good according to predefined defect types like black beans, dried cherries, fungus damage, insect damage, sour beans, floaters, and broken beans. 
+
+After classification, the system triggers the defect sorting mechanism, which physically takes out defective beans from the processing line. The mechanism includes a servo motor-powered sorting slide, which diverts defective beans into a distinct collection bin. Good beans that are classified are taken to the second level of sorting, which is density-based classification. At the density-based sorting level, good beans are weighed individually with a high-precision electronic balance. The U.S. Solid Electronic Precision Balance (0.01g, RS232) is embedded within the system to accurately weigh the mass of each bean. A Time-of-Flight (ToF) sensor also estimates the volume of each bean, permitting the calculation of the density of beans. According to the calculation of density, beans are automatically sorted into corresponding collection bins using a second sorting mechanism regulated by a NEMA 17 stepper motor.
+
+\subsection{Lighting Setup for Inspection Tray}
+
+Lighting has a key importance in the image-based detection and classification system, specifically for the inspection tray. For the model to be more accurate and precise in classifying good and defective beans, correct lighting is important such that details like surface texture, color difference, and defects are properly rendered by the imaging system. Asymmetrical, unsteady, or low-quality lighting can create shadows, reflections, or overexposure, all of which lower the quality of input images and thus decrease the accuracy of object detection and classification models like YOLO. To improve the consistency and definition of images taken during inspection, the lighting arrangement above the inspection tray was refined incrementally throughout development. The refinements were intended to maximize the illumination conditions for both the top and bottom camera modules.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=9cm]{ch5/Initial_Lighting_Setup.jpg}
+    \caption{First Iteration of Lighting Setup}
+    \label{fig:first_lighting}
+\end{figure}
+
+Figure \ref{fig:first_lighting} shows the initial lighting setup that the researchers implemented on the system. The initial lighting arrangement was based on a single top-mounted LED lighting. Although the arrangement was more than bright enough for the top camera, it introduced random shadows and highlights onto the bottom camera. As a result, only one side of the bean is accurately inspected. These random elements impacted the model's performance in detecting bean contours and separating surface flaws, particularly for dark beans or reflective-surface beans.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=9cm]{ch5/Modified_Lighting_Setup.png}
+    \caption{Second Iteration of Lighting Setup}
+    \label{fig:second_lighting}
+\end{figure}
+
+For the second iteration of the lighting setup, the researchers decided to add another LED strip lighting at the side of the inspection tray, while keeping the LED lighting mounted at the top. This provided good lighting for both top and bottom cameras. However, the view of the bottom camera is still a bit dark.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=9cm]{ch5/Final_Lighting_Setup.png}
+    \caption{Final Iteration of Lighting Setup}
+    \label{fig:final_lighting}
+\end{figure}
+
+To ensure that both camera views have sufficient lighting and avoid shadows, the researchers decided to use a total of three LED lights. One is a small ring light placed exactly above the inspection tray. Another LED light is a stip light placed at the side of the inspection tray to improve lighting at the side of each bean. Lastly, another small LED light is placed under the inspection tray to ensure that the bottom camera has enough lighting. 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=9cm]{ch5/Top_and_Bottom_View_of_the_Cameras.png}
+    \caption{Top and Bottom View of the Cameras}
+    \label{fig:top_and_bottom}
+\end{figure}
+
+\subsection{System Operation}
+
+The system operation follows a sequential process to ensure the effective sorting of green coffee beans (GCBs) based on its classification and density. The automated system consists of two primary stages: 1st Stage which is the machine vision-based classification and 2nd stage which is the density-based sorting.
+
+The process beings in the inputting of unsorted GCBs (Contains good and defective beans) into the screw feeder, which regulates the controlled and consistent delivery of the beans into the rotary conveyor table. The conveyor table is designed with aluminum guides to ensure a linearized formation of the beans to mitigate jamming. This also ensures a controlled movement of beans, ensuring that they drop onto the inspection tray one at a time. As the bean goes towards the edge of the conveyor table, the IR sensors detects the beans and stops the rotation to ensure the one-by-one inspection of the beans, this also prevents clogging, and jamming once the beans are dropped into the inspection tray. 
+
+The first phase involves machine-vision classification. Once the GCBs reach the inspection tray, each bean is analyzed one-by-one using a machine vision system consisting of top and bottom cameras. The system captures high-resolution images of the bean and processes the data to determine which classification it belongs. If the bean is identified as defective, a signal is sent to the servo motor, which redirects the bean into the defective bin for disposal, if the bean is classified as good, it then proceeds to the second phase of the system
+
+The second stage involves density-based sorting, where each GCB's weight is measured using a precision scale, while its volume is determined by the ToF10120 infrared sensor. The system then calculates the density and classifies the bean accordingly. 
+
+The sorting mechanism activates, directing beans into designated collection bins based on their density. High-density beans, often associated with specialty-grade quality, are separated from low-density, commercial-grade, or defective beans. 
+
+\section{Prototype Testing}
+
+\subsection{Sorting Speed}
+
+\begin{figure}[H]
+	\centering
+	\begin{tabularx}{\textwidth}{p{0.3\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}}
+		\caption{Sorting Speed Testing Table} \label{tab:sorting_speed} \\
+		\hline \hline
+		\textbf{Test Condition} & \textbf{Conveyor Table Speed (RPM)} & \textbf{Inspection Tray Speed (RPM)} & \textbf{Sorting Speed (Beans per Minute)} \\
+		\hline
+		100\% Good Beans &  &  &  \\
+		\hline
+		80\% Good, 20\% Defective Beans &  &  &  \\
+		\hline
+		70\% Good, 30\% Defective Beans &  &  &  \\
+		\hline
+		50\% Good, 50\% Defective Beans &  &  &  \\
+		\hline
+		100\% Defective Beans &  &  &  \\
+		\hline
+	\end{tabularx}
+\end{figure}
+
+The sorting speed of the system will be determined by conducting at least five trials. Each trial will be exactly conducted for one minute. The number of beans sorted out within the time frame are considered as the sorting speed in beans per minute. Then, the average sorting speed from the five trials is computed. In each trial session, controlled variables such as motor speed of the inspection tray and rotating conveyor table are varied to observe the optimal setting for the system, ensuring that there are no beans jamming in the tray and fast enough to meet the minimum sorting speed. Table \ref{tab:sorting_speed} shows the different conditions for each trial to ensure that the sorting speed across different type of beans are considered. 
+
+\subsection{Defect Sorting Accuracy}
+
+
+\begin{figure}[H]
+	\centering
+	\begin{tabularx}{\textwidth}{p{0.3\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}}
+		\caption{Good Bean Classification Accuracy Testing Table} \label{tab:good_accuracy_testing} \\
+		\hline \hline
+		\textbf{Test Condition} & \textbf{Correctly Classified Beans} & \textbf{Misclassified Beans} & \textbf{Total Number of Beans} \\
+		\hline
+		100\% Good Beans &  &  & 100\\
+		\hline
+		80\% Good, 20\% Defective Beans & & & 100 \\
+		\hline
+		70\% Good, 30\% Defective Beans & & & 100 \\
+		\hline
+		50\% Good, 50\% Defective Beans & & & 100 \\
+		\hline
+		100\% Defective Beans & & & 100 \\
+		\hline
+	\end{tabularx}
+\end{figure}
+
+The defect sorting accuracy by feeding 100 beans on each trial. For testing its accuracy for detecting good beans and defective beans, five trials are conducted containing 100 beans of good beans for the first trial, 80 good and 20 defects for the second trial, 50 good and 50 defects for the third trial, 20 good and 80 defects for the fourth trial, and 100 defects for the last trial. With these, the number of correctly classified and misclassified beans are logged into the system to compute for accuracy using the formula:
+
+\begin{equation}
+	\text{Accuracy} (\%) = \left( \frac{\text{Correctly Classified Beans}}{\text{Total Beans Tested}} \right) \times 100
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\begin{tabularx}{\textwidth}{p{0.3\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}}
+		\caption{Specific Defect Classification Accuracy Testing Table} \label{tab:defect_accuracy_testing} \\
+		\hline \hline
+		\textbf{Test Condition} & \textbf{Correctly Classified Beans} & \textbf{Misclassified Beans} & \textbf{Total Number of Beans} \\
+		\hline
+		100\% Good Beans &  &  & 100 \\
+		\hline
+		80\% Good, 20\% Defective Beans & & & 100 \\
+		\hline
+		70\% Good, 30\% Defective Beans & & & 100 \\
+		\hline
+		50\% Good, 50\% Defective Beans & & & 100 \\
+		\hline
+		100\% Defective Beans & & & 100 \\
+		\hline
+	\end{tabularx}
+\end{figure}
+
+For further accuracy testing of the computer vision model in actual implementation, the researchers also included testing trials for each defect type. Table \ref{tab:defect_accuracy_testing} shows how each trial is conducted. For example, the defect type chosen for the test is the Sour defect type. The first trial contains 100 sour beans. For the second trial, 80 sour beans and 20 randomly selected beans, excluding the chosen defect type which is sour. Thus, the random beans are always the other classes except the chosen defect type to be tested. In this test, correctly classified beans and misclassified beans are also considered to compute for the accuracy of the system. By testing the system under different defect distributions, the robustness of the machine vision model can be assessed.
+
+\begin{figure}[H]
+	\centering
+	\begin{tabularx}{\textwidth}{p{0.3\textwidth}|p{0.2\textwidth}}
+		\caption{Dataset Distribution for Overall Testing} \label{tab:dataset_distribution} \\
+		\hline \hline
+		\textbf{Bean Classification} & \textbf{Bean Count} \\
+		\hline
+		Black &  20 \\
+		\hline
+		Broken & 20 \\
+		\hline
+		Dried Cherry & 20 \\
+		\hline
+		Floater & 20 \\
+		\hline
+		Fungus Damage & 20 \\
+		\hline
+		Good & 20 \\
+		\hline
+		Insect Damage & 20 \\
+		\hline
+		Sour & 20 \\
+		\hline
+		\textbf{Total Beans} & \textbf{160} \\
+		\hline
+	\end{tabularx}
+\end{figure}
+
+Lastly, to assess the overall accuracy and reliability of the first stage, machine vision-based defect classification, a trial consisting of a predefined dataset of 160 coffee beans was conducted. Each category consists of 20 beans as shown in Table \ref{tab:dataset_distribution}, including good beans and the other defect types such as black, dried cherry, fungus, insect damage, sour, floater, and broken beans.
+
+\subsection{Density Sorting Accuracy}
+
+To assess the accuracy of the mechanism, it will rely on measuring the accuracy and the reliability of the density sorting mechanism in sorting out the dense beans to the less dense beans. To successfully determine the accuracy of the system, the basis will be the scale, where the system should be able to sort the dense beans to the less dense bean in relation to the detected weight in the scale. A successful system should be able to sort with an accuracy of 85%. 

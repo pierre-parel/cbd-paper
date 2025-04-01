@@ -1,28 +1,127 @@
-It is to be noted that each subsection in this chapter should discuss in narrative form each table that is presented in order to point out to the reader what the author(s) intend to convey.
-
 \section{Existing Work}
 
-Cite and summarize here relevant and significant literature (dissertations, theses, journals, patents, notable conference papers) through a table and descriptions to prove that no one has done your work yet and/or that your work is not a duplication of existing ones. Your focus here is what has \emph{been done}.
+\begin{center}
+	\begin{longtable}{| p{4cm} | p{10cm} |}
+		\caption{Review of Related Literature} 
+		\label{tab:related_lit}
+		\endfirsthead
+		\endhead
+		\hline
+		
+		\textbf{Literature} & \textbf{Description of the Literature} \\ 
+		\hline
 
+		\cite{Balay_Cabrera_Jensen_Mayuga_2024}
+		&
+		This study focused on the development of an automatic green coffee bean sorter. The algorithm used is the YOLOv8 to train the model, while a Raspberry Pi was used in order to test the model along with the sorting mechanism. There are a total of 6 defects that the system can detect these are full black, partial black, chipped, dried cherry, shell and dried cherries. A total of 10 trial were done to effectively test the system.  Out of the 10 trials, 9 trials were found to have an average target sensitivity of 97.8\%, with an average time of 2 minutes and 32 seconds for a total of 100 beans. \\
+		\hline
+
+		\cite{Amadea_Rachmawati_Ferdian_Akbar_2024}
+		&
+		In this study, a system was developed to detect defects in Arabica green coffee beans. The study used two different models such as Detection Transform (DETR) and You Only Look Once version 8 (YOLOv8). Upon comparison, YOLOv8 showed strengths in defect detection. On the other hand, DETR model showed significant strengths than the YOLOv8 model when it comes to defect detection. \\ 
+		\hline
+
+		\cite{de_Oliveira_Leme_Barbosa_Rodarte_Pereira_2016}
+		&
+		This study constructed a computer vision system that outputs measurements of green coffee beans, classifying them based on their color. In the system, Artificial Neural Network (ANN) was used as the transformation model. On the other hand, the Bayes classifier was used in classifying the coffee beans into four (whitish, cane green, green, and bluish-green). The model was able to achieve a small error of 1.15\%, while the Bayes classifier achieved a 100\% accuracy. To concluded, the developed system was able to effectively classify the coffee beans based on their color. \\
+		\hline
+
+		\cite{Balbin_Del_Valle_Lopez_Quiambao_2020}
+		&
+		In this study, the objective is to provide better technology for local coffee producers to increase export-quality beans production. Thus, the study proposed a device that can evaluate the size, quality, and roast level of a batch of beans fed into the machine. The model used in the system was the Black Propagation Neural Network (BPNN), together with other image processing techniques such as K-mean shift, Blob, and Canny Edge. These techniques were used to extract the features of the beans and analyzed using RGB analysis. \\
+		\hline
+
+		\cite{Pragathi_Jacob_2024}
+		&
+		The paper discusses the use of machine learning algorithms such as KNN and CNN to classify the specialty type coffee bean for Arabica. The coffee bean quality of an Arabica can be classified by the number of defective coffee bean presents in a sample. The defects are classified into two categories named primary and secondary. \\
+		\hline
+
+		\cite{Lualhati_Mariano_Torres_Fenol_2022}
+		&
+		With the lack of a locally made green coffee bean sorter in the Philippines, the researchers aimed to design and implement a device that will handle the sorting. The paper discusses the development of a Green Coffee Bean (GCB)  quality sorter. The system used a PID based algorithm and image processing algorithm for sorting. It utilized two cameras to capture images of both sides of the GCB, this was done to check for the quality of the GCB through a prediction test. The paper conducted a total of 5 tests, each with varying conditions. The designed system on average got an accuracy score of 89.17\% and sorting speed of 2 h and 45 mins per 1 Kg of GCB.  \\
+		\hline
+
+		\cite{García_Candelo_Becerra_Hoyos_2019}
+		&
+		The paper discusses the use of computer vision for quality and defective inspection for GCBs. The paper makes use of parameters such as color, morphology, shape, and size to determine the quality of the GCB. It makes use of the algorithm k-nearest neighbors (KNN) to differentiate the quality and to identify the defective beans. The designed prototype makes use of an Arduino MEGA board to gather the data and a DSLR camera to capture the GCB. The type of bean used was an Arabica, and a total of 444 grains were used to test the prototype. The accuracy score for both the quality evaluation and defective beans resulted in an average of 94.79\% and 95.78\% respectively. \\
+		\hline
+
+		\cite{NS_Akbar_Rachmawati_Sthevanie_2021}
+		&
+		The researchers proposed a system that sorts the Arabica coffee into 2 classes, defective and non-defective. After the classification into two classes, the coffee beans are then graded based on the quality consisting of: specialty grade, premium grade , exchange grade, below grade, and off grade. Utilizing computer vision for classifying the defective and non-defective beans, the researchers used the color histogram and the Local Binary Pattern (LBP) to get the color and the texture of the beans. The data gathered from both the color histogram and LBP are used to train two models, the random forest algorithm and the KNN algorithm. The results from both algorithms are both promising, with an average accuracy score of 86.56\% using the random forest algorithm and 80.8\% for the KNN algorithm, However, this result shows that utilizing the random forest algorithm provided better accuracy scores for the model. \\
+		\hline
+
+		\cite{Huang_Chou_Lee_2019}
+		&
+		The paper discusses the development of a GCB sorter in real-time by using Convolutional Neural Network (CNN) . The researchers used a total of 72,000 images of good and bad beans, 36,000 per category respectively. A total of 7,000 images for the beans were picked at random to test the model, while the remaining was used to train the model. To test the model, a webcam was used to record the coffee beans, however this resulted in capturing only the topside of the bean,to solve this the beans were flipped to provide accurate results. This resulted in an average accuracy score of 93.34\% with a false positive rate of 0.1007. \\
+		\hline
+
+		\cite{Luis_Quinones_Yumang_2022}
+		&
+		The paper focuses on using You Only Look Once (YOLOv5) as the algorithm for detecting the defective GCB. The researchers used a Raspberry Pi camera to capture the images of the coffee beans. To test the effectiveness of the developed system a total of 45 trials were conducted with varying classification that the model was trained on. The model tested a total of 15 trials for each classification, these classifications are black, normal and broken. Each classification provided different accuracy results, for the blackened coffee bean, a total of 106 coffee beans were tested which resulted with an 100\% accuracy by correctly identifying 106 blackened coffee beans. For the normal coffee bean, a total of 117 beans were used which resulted in an accuracy score of 91.45\% since only 107 out of 117, were accurately classified. Lastly, a total of 104 broken beans were used, which resulted with an accuracy score of 94.23\% since only 98 beans were correctly classified. The average accuracy score of the system developed resulted in an average of 95.11\%. \\
+		\hline
+
+		\cite{Santos_Rosas_Martins_Araújo_Viana_Gonçalves_2020}
+		&
+		In this study, the development of quality assessment of coffee beans through computer vision and machine learning algorithms. The main parameters that this study considers are the shape and color features of the coffee bean and they used machine learning techniques such as Support Vector Machine (SVM), Deep Neural Network (DNN) and Random Forest (RF), to identify the coffee beans’ defect. The script written in Python Language was used to extract shape and color features of the coffee beans based on the datasets. Overall, the system had a very high accuracy (>88\%) on classifying coffee beans through the models that have been developed. \\
+		\hline
+
+		\cite{Arboleda_Fajardo_Medina_2020}
+		&
+		The study proposed a novel solution that deals with the low signal-to-noise ratio. The study shows a way of extracting features of an image in context with green coffee beans. The researchers concluded a new edge detection approach for green coffee beans. It was achieved by using the heuristic approach in calculating the right values for the discriminant and finding the best pixel formation.  \\
+		\hline
+
+		\cite{Susanibar_Ramirez_Sanchez_Ramirez_2024}
+		&
+		The proposed system aims to implement a GCB automated classification based on size and defects. The paper classified each bean into three different sizes. The system used two stages to identify the sizes of each bean. Firstly the entrance of the system was measured to ensure that the bigger beans are not able to pass through. The second stage involves the use of a cylindrical sieve with holes. This resulted with an average accuracy score of 96\% for classifying the beans in size. However, the system does not provide a good accuracy score in classifying beans in terms of its defect since it only averaged 80\% when classifying the defects of the beans.  \\
+		\hline
+
+		\cite{Srisang_Chanpaka_Chungcharoen_2019}
+		&
+		The study proposed an oscillating sieve as the main way for sorting Robusta coffee beans. Sizes are differentiated into 4 classes: extra large (XL), large (L), medium (M), small (S).  The sieve resulted in an accuracy score of around 79\% in classifying the sizes of the coffee beans.  \\
+		\hline
+	\end{longtable}
+\end{center}
 
 \section{Lacking in the Approaches}
 
-You can summarize the weaknesses of existing approaches by a tabular comparison of the literature. Your focus here is what has \emph{not been done}, i.e. what features were missed, what solutions were not considered, what the demerits are, etc.  Through these items, you then can introduce the necessity for doing your proposed solution.  
-
-It is to be noted that the degree of novelty for undergraduate thesis is lower than those for graduate school. If a Ph.D. dissertation/thesis has a high degree of novelty and that for an undergraduate is low, then a master's thesis is somewhere between the two.
-
-Briefly include here the following in order to remind the reader why you are highlighting the weaknesses of the solutions of existing literature. 
-
-\begin{itemize}
-	\item mentioning the problem
-	\item showing how your solution is better (can be better (for proposals))
-\end{itemize}
-
-
+\begin{center}
+	\begin{longtable}{| p{7cm} | p{7cm} |}
+		\caption{Comparing Proposed Study and Existing Studies} 
+		\label{tab:comparing_study}
+		\endfirsthead
+		\endhead
+		\hline
+		
+		\textbf{Existing Studies} & \textbf{Proposed Study} \\ 
+		\hline
+		\begin{itemize}
+			\item Uses computer vision to classify green coffee bean grade based on its visual characteristics such as size, color, and shape.
+			\item Most related studies classify defective and non-defective beans only.
+			\item The density parameter of the green coffee beans is not considered.
+			\item Similar study \cite{Lualhati_Mariano_Torres_Fenol_2022} only considered three classifications of GCBs: Good, Black, and Irregular-Shaped beans.
+			\item Similar automated GCB sorter \cite{Balay_Cabrera_Jensen_Mayuga_2024} only considered one side of the bean.
+			\item Existing classification of GCBs with automated sorters do not have an integrated graphical user interface (GUI) for data analytics.
+		\end{itemize}
+		&
+		\begin{itemize}
+			\item Computer vision will be used to analyze the physical characteristics of the bean, including its volume.
+			\item Density parameters will be considered by implementing a weighing scale to the system.
+			\item The system will implement two stages of sorting:
+			\begin{itemize}
+				\item The first stage sorts out the defective beans.
+				\item The second stage sorts out the potential specialty-grade beans based on their density and size.
+			\end{itemize}
+			\item The system is designed to inspect both sides, utilizing two cameras.
+			\item The system is designed with a GUI for farmers to visualize the cumulative data of the defects present in the batch.
+		\end{itemize}
+		\\ \hline			
+	\end{longtable}
+\end{center}
 
 \section{Summary}
 
-Provide the gist of this chapter such that it reflects the contents and the message.
+The various related literature discusses the numerous technological advancements related to coffee bean sorting to aid coffee farmers and producers on efficient sorting and classification of beans. These studies provide insights regarding the various methods used in the field of coffee sorting that utilize machine vision, density-based analysis, and deep learning to identify and classify coffee beans based on their physical parameters. Numerous studies discussed parameters like size, defects, and color. However, existing studies tend to focus primarily on visual characteristics and lack integration density analysis for accurate classification of green coffee beans. The review literature identifies and acknowledges the gaps in current sorting practices, such as the lack of comprehensive systems that implement machine vision and density-based analysis. The study aims to address these gaps by proposing a two-stage sorting system that automates both detection of defective beans and the classification of less-dense beans. Density and size will play a significant role, as it is linked to identifying the quality of the coffee bean. However, related literature mentioned overlooks this parameter for classifying the coffee bean. Higher density beans are often associated with higher quality coffee beans, into being potential specialty-grade coffee after roasting and cupping. 
 
 
 
