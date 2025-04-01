@@ -101,44 +101,44 @@
 \contentsline {section}{\numberline {7.1}Concluding Remarks}{110}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Contributions}{110}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Recommendations}{110}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Future Prospects}{110}{section.7.4}%
-\contentsline {chapter}{References}{111}{chapter*.63}%
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Student Research Ethics Clearance}}{114}{appendix.A}%
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Answers to Questions to this Thesis}}{116}{appendix.B}%
-\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase []{Revisions to the Proposal}}{119}{appendix.C}%
-\contentsline {appendix}{\chapternumberline {D}\MakeTextUppercase []{Revisions to the Final}}{125}{appendix.D}%
-\contentsline {appendix}{\chapternumberline {E}\MakeTextUppercase []{Usage Examples}}{129}{appendix.E}%
-\contentsline {section}{\numberline {E1}Equations}{130}{section.E.1}%
-\contentsline {section}{\numberline {E2}Notations}{132}{section.E.2}%
-\contentsline {subsection}{\numberline {E2.1}Math alphabets}{132}{subsection.E.2.1}%
-\contentsline {subsection}{\numberline {E2.2}Vector symbols}{132}{subsection.E.2.2}%
-\contentsline {subsection}{\numberline {E2.3}Matrix symbols}{132}{subsection.E.2.3}%
-\contentsline {subsection}{\numberline {E2.4}Tensor symbols}{133}{subsection.E.2.4}%
-\contentsline {subsection}{\numberline {E2.5}Bold math version}{134}{subsection.E.2.5}%
-\contentsline {subsubsection}{\numberline {E2.5.1}Vector symbols}{134}{subsubsection.E.2.5.1}%
-\contentsline {subsubsection}{\numberline {E2.5.2}Matrix symbols}{134}{subsubsection.E.2.5.2}%
-\contentsline {subsubsection}{\numberline {E2.5.3}Tensor symbols}{134}{subsubsection.E.2.5.3}%
-\contentsline {section}{\numberline {E3}Abbreviation}{138}{section.E.3}%
-\contentsline {section}{\numberline {E4}Glossary}{140}{section.E.4}%
-\contentsline {section}{\numberline {E5}Figure}{142}{section.E.5}%
-\contentsline {section}{\numberline {E6}Table}{148}{section.E.6}%
-\contentsline {section}{\numberline {E7}Algorithm or Pseudocode Listing}{152}{section.E.7}%
-\contentsline {section}{\numberline {E8}Program/Code Listing}{154}{section.E.8}%
-\contentsline {section}{\numberline {E9}Referencing}{156}{section.E.9}%
-\contentsline {subsection}{\numberline {E9.1}A subsection}{157}{subsection.E.9.1}%
-\contentsline {subsubsection}{\numberline {E9.1.1}A sub-subsection}{158}{subsubsection.E.9.1.1}%
-\contentsline {section}{\numberline {E10}Citing}{159}{section.E.10}%
-\contentsline {subsection}{\numberline {E10.1}Books}{159}{subsection.E.10.1}%
-\contentsline {subsection}{\numberline {E10.2}Booklets}{161}{subsection.E.10.2}%
-\contentsline {subsection}{\numberline {E10.3}Proceedings}{161}{subsection.E.10.3}%
-\contentsline {subsection}{\numberline {E10.4}In books}{161}{subsection.E.10.4}%
-\contentsline {subsection}{\numberline {E10.5}In proceedings}{162}{subsection.E.10.5}%
-\contentsline {subsection}{\numberline {E10.6}Journals}{162}{subsection.E.10.6}%
-\contentsline {subsection}{\numberline {E10.7}Theses/dissertations}{164}{subsection.E.10.7}%
-\contentsline {subsection}{\numberline {E10.8}Technical Reports and Others}{164}{subsection.E.10.8}%
-\contentsline {subsection}{\numberline {E10.9}Miscellaneous}{165}{subsection.E.10.9}%
-\contentsline {section}{\numberline {E11}Index}{166}{section.E.11}%
-\contentsline {section}{\numberline {E12}Adding Relevant PDF Pages}{167}{section.E.12}%
-\contentsline {appendix}{\chapternumberline {F}\MakeTextUppercase []{Vita}}{171}{appendix.F}%
-\contentsline {appendix}{\chapternumberline {G}\MakeTextUppercase []{Article Paper(s)}}{173}{appendix.G}%
+\contentsline {section}{\numberline {7.4}Future Prospects}{111}{section.7.4}%
+\contentsline {chapter}{References}{112}{chapter*.63}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Student Research Ethics Clearance}}{115}{appendix.A}%
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Answers to Questions to this Thesis}}{117}{appendix.B}%
+\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase []{Revisions to the Proposal}}{120}{appendix.C}%
+\contentsline {appendix}{\chapternumberline {D}\MakeTextUppercase []{Revisions to the Final}}{126}{appendix.D}%
+\contentsline {appendix}{\chapternumberline {E}\MakeTextUppercase []{Usage Examples}}{130}{appendix.E}%
+\contentsline {section}{\numberline {E1}Equations}{131}{section.E.1}%
+\contentsline {section}{\numberline {E2}Notations}{133}{section.E.2}%
+\contentsline {subsection}{\numberline {E2.1}Math alphabets}{133}{subsection.E.2.1}%
+\contentsline {subsection}{\numberline {E2.2}Vector symbols}{133}{subsection.E.2.2}%
+\contentsline {subsection}{\numberline {E2.3}Matrix symbols}{133}{subsection.E.2.3}%
+\contentsline {subsection}{\numberline {E2.4}Tensor symbols}{134}{subsection.E.2.4}%
+\contentsline {subsection}{\numberline {E2.5}Bold math version}{135}{subsection.E.2.5}%
+\contentsline {subsubsection}{\numberline {E2.5.1}Vector symbols}{135}{subsubsection.E.2.5.1}%
+\contentsline {subsubsection}{\numberline {E2.5.2}Matrix symbols}{135}{subsubsection.E.2.5.2}%
+\contentsline {subsubsection}{\numberline {E2.5.3}Tensor symbols}{135}{subsubsection.E.2.5.3}%
+\contentsline {section}{\numberline {E3}Abbreviation}{139}{section.E.3}%
+\contentsline {section}{\numberline {E4}Glossary}{141}{section.E.4}%
+\contentsline {section}{\numberline {E5}Figure}{143}{section.E.5}%
+\contentsline {section}{\numberline {E6}Table}{149}{section.E.6}%
+\contentsline {section}{\numberline {E7}Algorithm or Pseudocode Listing}{153}{section.E.7}%
+\contentsline {section}{\numberline {E8}Program/Code Listing}{155}{section.E.8}%
+\contentsline {section}{\numberline {E9}Referencing}{157}{section.E.9}%
+\contentsline {subsection}{\numberline {E9.1}A subsection}{158}{subsection.E.9.1}%
+\contentsline {subsubsection}{\numberline {E9.1.1}A sub-subsection}{159}{subsubsection.E.9.1.1}%
+\contentsline {section}{\numberline {E10}Citing}{160}{section.E.10}%
+\contentsline {subsection}{\numberline {E10.1}Books}{160}{subsection.E.10.1}%
+\contentsline {subsection}{\numberline {E10.2}Booklets}{162}{subsection.E.10.2}%
+\contentsline {subsection}{\numberline {E10.3}Proceedings}{162}{subsection.E.10.3}%
+\contentsline {subsection}{\numberline {E10.4}In books}{162}{subsection.E.10.4}%
+\contentsline {subsection}{\numberline {E10.5}In proceedings}{163}{subsection.E.10.5}%
+\contentsline {subsection}{\numberline {E10.6}Journals}{163}{subsection.E.10.6}%
+\contentsline {subsection}{\numberline {E10.7}Theses/dissertations}{165}{subsection.E.10.7}%
+\contentsline {subsection}{\numberline {E10.8}Technical Reports and Others}{165}{subsection.E.10.8}%
+\contentsline {subsection}{\numberline {E10.9}Miscellaneous}{166}{subsection.E.10.9}%
+\contentsline {section}{\numberline {E11}Index}{167}{section.E.11}%
+\contentsline {section}{\numberline {E12}Adding Relevant PDF Pages}{168}{section.E.12}%
+\contentsline {appendix}{\chapternumberline {F}\MakeTextUppercase []{Vita}}{172}{appendix.F}%
+\contentsline {appendix}{\chapternumberline {G}\MakeTextUppercase []{Article Paper(s)}}{174}{appendix.G}%
 \contentsfinish 
