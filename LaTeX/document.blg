@@ -180,32 +180,32 @@ Warning--I didn't find a database entry for "wassenberg"
 Warning--I didn't find a database entry for "misc-minimal"
 You've used 37 entries,
             1935 wiz_defined-function locations,
-            867 strings with 15407 characters,
-and the built_in function-call counts, 14038 in all, are:
-= -- 1369
-> -- 637
+            866 strings with 15356 characters,
+and the built_in function-call counts, 13997 in all, are:
+= -- 1365
+> -- 631
 < -- 21
-+ -- 224
-- -- 214
-* -- 1151
-:= -- 2494
++ -- 222
+- -- 212
+* -- 1145
+:= -- 2488
 add.period$ -- 102
 call.type$ -- 37
-change.case$ -- 290
+change.case$ -- 289
 chr.to.int$ -- 37
 cite$ -- 37
 duplicate$ -- 536
 empty$ -- 909
-format.name$ -- 265
-if$ -- 2714
+format.name$ -- 261
+if$ -- 2706
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 25
 newline$ -- 177
 num.names$ -- 111
-pop$ -- 255
+pop$ -- 254
 preamble$ -- 1
-purify$ -- 292
+purify$ -- 291
 quote$ -- 0
 skip$ -- 423
 stack$ -- 0

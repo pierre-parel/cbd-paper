@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.16)  1 APR 2025 22:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.2) (preloaded format=pdflatex 2025.3.16)  1 APR 2025 22:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2506,17 +2506,6 @@ line 18.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-! LaTeX Error: Command \k unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...bek_Krot_Wodecki_Zimroz_Szrek_Zimroz_2022}
-                                                  . The conveyor table is us...
-
-? 
-
 
 File: figure/../format/dlsu_thesis_paper_letterhead.pdf Graphic file (type pdf)
 
@@ -3758,7 +3747,7 @@ File: figure/../format/dlsu_thesis_paper_letterhead.pdf Graphic file (type pdf)
 
 <use figure/../format/dlsu_thesis_paper_letterhead.pdf>
 Package pdftex.def Info: figure/../format/dlsu_thesis_paper_letterhead.pdf  use
-d on input line 14.
+d on input line 9.
 (pdftex.def)             Requested size: 614.31223pt x 794.99231pt.
 [110
 
@@ -3778,7 +3767,7 @@ File: figure/../format/dlsu_thesis_paper_letterhead.pdf Graphic file (type pdf)
 
 <use figure/../format/dlsu_thesis_paper_letterhead.pdf>
 Package pdftex.def Info: figure/../format/dlsu_thesis_paper_letterhead.pdf  use
-d on input line 87.
+d on input line 83.
 (pdftex.def)             Requested size: 614.31223pt x 794.99231pt.
 [112
 
@@ -3786,32 +3775,11 @@ d on input line 87.
 
 ]
 
-! LaTeX Error: Command \k unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.88 ...bek_Krot_Wodecki_Zimroz_Szrek_Zimroz_2022}
-                                                  
-? 
-
-! LaTeX Error: Command \k unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.89 Dą
-        bek, P., Krot, P., Wodecki, J., Zimroz, P., Szrek, J., and Zimroz, R.
-? 
-
-
 File: figure/../format/dlsu_thesis_paper_letterhead.pdf Graphic file (type pdf)
 
 <use figure/../format/dlsu_thesis_paper_letterhead.pdf>
 Package pdftex.def Info: figure/../format/dlsu_thesis_paper_letterhead.pdf  use
-d on input line 167.
+d on input line 161.
 (pdftex.def)             Requested size: 614.31223pt x 794.99231pt.
 [113])
 
@@ -5869,19 +5837,11 @@ Package pdftex.def Info: article_forum_paper.pdf , page2 used on input line 388
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 [176
 
- <./article_forum_paper.pdf>]
-
-Package datagidx Warning: Rerun required to ensure the index/glossary location 
-lists are up-to-date.
-
-
-Package datagidx Warning: Rerun required to sort the index/glossary databases.
-
-(document.aux (introduction.aux) (literature_review.aux)
-(theoretical_considerations.aux) (design_considerations.aux) (methodology.aux)
-(results_and_discussions.aux) (conclusions.aux) (answers_to_questions.aux)
-(revisions_to_the_proposal.aux) (revisions_to_the_final.aux)
-(usage_examples.aux) (vita.aux))
+ <./article_forum_paper.pdf>] (document.aux (introduction.aux)
+(literature_review.aux) (theoretical_considerations.aux)
+(design_considerations.aux) (methodology.aux) (results_and_discussions.aux)
+(conclusions.aux) (answers_to_questions.aux) (revisions_to_the_proposal.aux)
+(revisions_to_the_final.aux) (usage_examples.aux) (vita.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2020/03/25>
@@ -5897,11 +5857,11 @@ Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: 2419E9AD81651203264AE782EE1DDB62;22847.
  ) 
 Here is how much of TeX's memory you used:
- 50655 strings out of 473523
- 954798 string characters out of 5716082
- 2878003 words of memory out of 5000000
+ 50661 strings out of 473523
+ 954885 string characters out of 5716082
+ 2879427 words of memory out of 5000000
  71287 multiletter control sequences out of 15000+600000
- 649451 words of font info for 515 fonts, out of 8000000 for 9000
+ 649771 words of font info for 519 fonts, out of 8000000 for 9000
  1149 hyphenation exceptions out of 8191
  93i,19n,129p,2737b,2237s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Pc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt090
@@ -5940,7 +5900,7 @@ b8a.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8
 a.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.p
 fb><C:/Users/Pc/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on document.pdf (191 pages, 48474253 bytes).
+Output written on document.pdf (191 pages, 48474472 bytes).
 PDF statistics:
  3297 PDF objects out of 3580 (max. 8388607)
  1166 named destinations out of 1200 (max. 500000)

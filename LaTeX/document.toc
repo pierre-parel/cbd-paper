@@ -100,7 +100,7 @@
 \contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{Conclusions, Recommendations, and Future Directives}}{109}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Concluding Remarks}{110}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Contributions}{110}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Recommendations}{110}{section.7.3}%
+\contentsline {section}{\numberline {7.3}Recommendations}{111}{section.7.3}%
 \contentsline {section}{\numberline {7.4}Future Prospects}{111}{section.7.4}%
 \contentsline {chapter}{References}{112}{chapter*.63}%
 \contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Student Research Ethics Clearance}}{115}{appendix.A}%

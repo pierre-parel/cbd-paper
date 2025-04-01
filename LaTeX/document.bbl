@@ -1,5 +1,13 @@
 \begin{thebibliography}{}
 
+\bibitem[Akbar et~al., 2021]{NS_Akbar_Rachmawati_Sthevanie_2021}
+Akbar, M., Rachmawati, E., and Sthevanie, F. (2021).
+\newblock Visual feature and machine learning approach for arabica green coffee
+  beans grade determination.
+\newblock In {\em Proceedings of the 6th International Conference on
+  Communication and Information Processing}, ICCIP ’20, page 97–104, New
+  York, NY, USA. Association for Computing Machinery.
+
 \bibitem[Amadea et~al., 2024]{Amadea_Rachmawati_Ferdian_Akbar_2024}
 Amadea, V., Rachmawati, E., Ferdian, E., and Akbar, M. N.~S. (2024).
 \newblock Defect detection in arabica green coffee beans based on grade
@@ -49,6 +57,11 @@ Barbosa, M. d. S.~G., Scholz, M. B. d.~S., Kitzberger, C. S.~G., and Benassi,
 {Bureau of Agriculture and Fisheries Standards} (2012).
 \newblock Green coffee beans -- specifications.
 
+\bibitem[{Bureau of Agriculture and Fisheries Standards},
+  2022]{Bureau_of_Agriculture_and_Fisheries_Standards_2022}
+{Bureau of Agriculture and Fisheries Standards} (2022).
+\newblock Green coffee bean sorter — specifications.
+
 \bibitem[Córdoba et~al.,
   2021]{Córdoba_Moreno_Osorio_Velásquez_Fernandez-Alduenda_Ruiz-Pardo_2021}
 Córdoba, N., Moreno, F.~L., Osorio, C., Velásquez, S., Fernandez-Alduenda,
@@ -61,6 +74,12 @@ Córdoba, N., Moreno, F.~L., Osorio, C., Velásquez, S., Fernandez-Alduenda,
 da~Cruz, A.~G., Cenci, S.~A., and Maia, M. C.~A. (2006).
 \newblock Quality assurance requirements in produce processing.
 \newblock {\em Trends in Food Science \& Technology}, 17(8):406--411.
+
+\bibitem[Dabek et~al., 2022]{Dabek_Krot_Wodecki_Zimroz_Szrek_Zimroz_2022}
+Dabek, P., Krot, P., Wodecki, J., Zimroz, P., Szrek, J., and Zimroz, R. (2022).
+\newblock Measurement of idlers rotation speed in belt conveyors based on image
+  data analysis for diagnostic purposes.
+\newblock {\em Measurement}, 202:111869.
 
 \bibitem[Das et~al., 2019]{Das_Hollander_Suliman_2019}
 Das, S., Hollander, C.~D., and Suliman, S. (2019).
@@ -84,13 +103,6 @@ Deepti, R. and Prabadevi, B. (2024).
 \newblock Yolotransformer-transdetect: a hybrid model for steel tube defect
   detection using yolo and transformer architectures | international journal on
   interactive design and manufacturing (ijidem).
-
-\bibitem[Dąbek et~al., 2022]{Dabek_Krot_Wodecki_Zimroz_Szrek_Zimroz_2022}
-Dąbek, P., Krot, P., Wodecki, J., Zimroz, P., Szrek, J., and Zimroz, R.
-  (2022).
-\newblock Measurement of idlers rotation speed in belt conveyors based on image
-  data analysis for diagnostic purposes.
-\newblock {\em Measurement}, 202:111869.
 
 \bibitem[García et~al., 2019]{García_Candelo_Becerra_Hoyos_2019}
 García, M., Candelo-Becerra, J.~E., and Hoyos, F.~E. (2019).
@@ -176,19 +188,6 @@ Minglani, D., Sharma, A., Pandey, H., Dayal, R., Joshi, J.~B., and Subramaniam,
   S. (2020).
 \newblock A review of granular flow in screw feeders and conveyors.
 \newblock {\em Powder Technology}, 366:369--381.
-
-\bibitem[N.S.~Akbar et~al., 2021]{NS_Akbar_Rachmawati_Sthevanie_2021}
-N.S.~Akbar, M., Rachmawati, E., and Sthevanie, F. (2021).
-\newblock Visual feature and machine learning approach for arabica green coffee
-  beans grade determination.
-\newblock In {\em Proceedings of the 6th International Conference on
-  Communication and Information Processing}, ICCIP ’20, page 97–104, New
-  York, NY, USA. Association for Computing Machinery.
-
-\bibitem[of~Agriculture and Standards,
-  2022]{Bureau_of_Agriculture_and_Fisheries_Standards_2022}
-of~Agriculture, B. and Standards, F. (2022).
-\newblock Green coffee bean sorter — specifications.
 
 \bibitem[Pragathi and Jacob, 2024]{Pragathi_Jacob_2024}
 Pragathi, S.~P. and Jacob, L. (2024).
