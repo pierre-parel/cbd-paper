@@ -4,10 +4,10 @@ Coffee is one of the most globally consumed beverages. It is a vital product in 
 
 To stay competitive in the rapidly evolving coffee industry, farmers carefully select high-quality coffee beans for production. Grading green coffee beans is a crucial part of coffee production, as it is directly associated with the quality of the cup quality of coffee brews \cite{Barbosa_Scholz_Kitzberger_Benassi_2019}. Coffee grading is a process in the industry that determines the quality of coffee beans, using various parameters such as size, density, color, and defects, ensuring that only high quality beans are selected for consumption \cite{Córdoba_Moreno_Osorio_Velásquez_Fernandez-Alduenda_Ruiz-Pardo_2021}. The size of coffee beans is determined using a screen size and sorting procedure, where the coffee beans are categorized into different screen sizes, with larger beans considered higher quality \cite{González_Lopez_Taboada_Gaytán_Ramos_2019}. The density of a bean can be calculated by the ratio of its mass and volume, which greatly influences the roasting process and overall quality of the coffee \cite{Datov_Lin_2019}. Color is also another indicator for quality, with darker beans being preferred for their richer flavor profile. On the other hand, defects are classified among 3 categories: Category 1 includes the most severe issues such as foreign matter and black beans, Category 2 includes less severe defects like broken beans, and Category 3 includes minor defects like slight discoloration. Determining the quality of the coffee beans in relation to their defect values is based on quality standards and grading systems such as SCAA protocols guidance or the Philippine National Standard on Green Coffee Bean \cite{Bureau_of_Agriculture_and_Fisheries_Standards_2012}. 
 
-Traditionally, this stage of assessing and categorizing coffee beans relies on visual evaluation, which is time-consuming and labor-intensive, making it prone to human error. One of the biggest challenges in coffee bean production is ensuring consistency in quality. As the demand for specialty coffee continues to grow, there has also been an increase for the need of more efficient and accurate sorting methods. The application of modern technology can help reduce the labor costs and minimize human errors in these tasks. In recent years, computer vision was used alongside various machine learning models and techniques, such as convolutional neural networks (CNNs), support vector machines (SVMs), or K-nearest neighors (KNN) models, where the models were trained on labeled data to classify images of coffee beans into different quality categories. The proposed aims to utilize this technology to develop a two-stage automated coffee bean sorting system using machine vision and density-based analysis to categorize and identify and segregate specialty-grade green coffee beans from non-specialty and defective coffee beans. 
+Traditionally, this stage of assessing and categorizing coffee beans relies on visual evaluation, which is time-consuming and labor-intensive, making it prone to human error. One of the biggest challenges in coffee bean production is ensuring consistency in quality. As the demand for specialty coffee continues to grow, there has also been an increase for the need of more efficient and accurate sorting methods. The application of modern technology can help reduce the labor costs and minimize human errors in these tasks. In recent years, computer vision was used alongside various machine learning models and techniques, such as convolutional neural networks (CNNs), support vector machines (SVMs), or K-nearest neighors (KNN) models, where the models were trained on labeled data to classify images of coffee beans into different quality categories. The proposed study aims to utilize this technology to develop a two-stage automated coffee bean sorting system using machine vision and density-based analysis to categorize and identify defects, good beans, dense, and less-dense green coffee beans. 
 
 \section{Prior Studies}
-Identifying and sorting specialty-grade coffee beans can be strenuous since the traditional way of classifying a specialty-grade coffee is by manually sorting the coffee bean batch and classifying them according to the set of standards of the SCAA. The existing work aims to solve these problems through image processing and implementing deep learning-based models to automatically sort the coffee beans while achieving high accuracy. However, these solutions only automate detecting either one of the parameters such as defects, color, and size, while the proposed system considers density, size, color and defects all in one system. Hence, eliminating human intervention or labor. The table below shows the comparison of existing solutions to the researcher’s proposal aligning with the traditional way of sorting coffee beans. 
+Identifying and sorting specialty-grade coffee beans can be strenuous since the traditional way of classifying a specialty-grade coffee is by manually sorting the coffee bean batch and classifying them according to the set of standards of the SCAA. The existing work aims to solve these problems through image processing and implementing deep learning-based models to automatically sort the coffee beans while achieving high accuracy. However, these solutions only automate detecting either one of the parameters such as defects, color, and size, while the proposed system considers density, color and defects all in one system. Hence, eliminating human intervention or labor. The table below shows the comparison of existing solutions to the researcher’s proposal aligning with the traditional way of sorting coffee beans.
 
 \begin{center}
     \begin{longtable}{| p{4cm} | p{10cm} |}
@@ -35,19 +35,18 @@ Identifying and sorting specialty-grade coffee beans can be strenuous since the 
 
 \begin{center}
 	\scriptsize{
-    \begin{longtable}{| p{5cm} | p{4cm} | p{4cm} |}
+    \begin{longtable}{| p{0.3\textwidth} | p{0.3\textwidth} | p{0.3\textwidth} |}
 	\caption{Comparison Table on Existing Studies} 	
 	\label{comparison_table_existing_studies}
 	\endfirsthead
 	\endhead
     \hline
-	% TODO: FIX CITATIONS HERE
-    Proposed System & \cite{Balay_Cabrera_Jensen_Mayuga_2024} & \cite{Lualhati_Mariano_Torres_Fenol_2022} \\ \hline
+    Proposed System & \cite{Balay_Cabrera_Jensen_Mayuga_2024} & \cite{Lualhati_Mariano_Torres_Fenol_2022}\\ \hline
     
 	\begin{itemize}
-		\item Defect sorting using EfficientNetV2. 
+		\item Defect sorting using RFDETR, YOLOv12, and Vision Transformer models. 
 
-		\item Considers classification of 10 defect types. 
+		\item Considers classification of 7 defect types. 
 	
 		\item The system considers density parameters to sort out less-dense beans. 
 	
@@ -64,7 +63,6 @@ Identifying and sorting specialty-grade coffee beans can be strenuous since the 
 	&
 	\begin{itemize}
 		\item Defect sorting using YOLOv2 and InceptionV3. 
-
 		\item The study considered only 2 types of defects. 
 	\end{itemize}
 	\\
@@ -80,7 +78,7 @@ The Philippine coffee industry is a growing market, however it is stuck with usi
 
 % TODO: UPDATE BASED ON NEW OBJECTIVES
 \subsection{General Objective (GO)}
- \Copy{GO}{GO: To develop an automated (Arabica) green coffee bean sorter that identifies good, less-dense and defective beans from an unsorted batch of coffee beans. The system will utilize machine vision and density-based analysis for defect detection and classification of the coffee beans, ensuring efficient coffee bean sorting.};
+ \Copy{GO}{GO: The study aims to develop an automated (Arabica) green coffee bean sorter that identifies good, less-dense and defective beans from an unsorted batch of coffee beans. The system will utilize machine vision and density-based analysis for defect detection and classification of the coffee beans, ensuring efficient coffee bean sorting.};
 
 \subsection{Specific Objectives (SOs)}
 
@@ -93,8 +91,6 @@ The Philippine coffee industry is a growing market, however it is stuck with usi
 	
 	\item \Copy{SO4}{SO4: To achieve an accuracy of at least 85\% in filtering out less-dense green coffee beans};
 \end{itemize}
-
-
 
 \subsection{Expected Deliverables}
 
@@ -153,8 +149,6 @@ yields of the \documentType.
 				\item Sorting Mechanism 
 			\end{itemize} 
 		 	\\ \hline
-%						
-%			
 		\end{tabular}
 	}
 \end{table}
@@ -163,7 +157,7 @@ yields of the \documentType.
 
 \section{Significance of the Study}
 
-The study explores the implementation of machine Vision and density analysis of an automated coffee been sorter that can identify and sort out the defective, less-dense and good green coffee beans. This said system would aid coffee sorters to mitigate manual labor and to ensure that the sorting process of the GCB are accurate. In order to test the effectiveness of the system, the study would gather data and compare the time efficiency and accuracy of the manual sorting by a an expert sorter to be compared with the proposed system. The system proposes significance to specific parts of society as follows: 
+The study explores the implementation of machine vision and density analysis of an automated coffee been sorter that can identify and sort out the defective, less-dense and good green coffee beans. This said system would aid coffee sorters to mitigate manual labor and to ensure that the sorting process of the GCB are accurate. In order to test the effectiveness of the system, the study would gather data and compare the time efficiency and accuracy of the manual sorting by a an expert sorter to be compared with the proposed system. The system proposes significance to specific parts of society as follows: 
 
 \subsection{Technical Benefit}
 
@@ -182,7 +176,7 @@ The study would aid coffee farmers and producers, by providing an automated syst
 	
 	\item Identifying the defective coffee beans using the machine vision and density-based analysis would be much more efficient and accurate than manually sorting them;
 	
-	\item During testing, test batches will contain 50\% good beans and 50\% defective beans, 60\% good beans and 40\% defective beans, 70\% good beans and 30\% defective beans, 80\% good beans and 20\% defective beans, 90\% good beans and 10\% defective beans, 100\% good beans;	
+	\item During testing, test batches will contain 50\% good beans and 50\% defective beans, 75\% good beans and 25\% defective beans, 25\% good beans and 75\% defective beans, 100\% defective beans, and 100\% good beans;	
 \end{enumerate}
 
 \subsection{Scope}
@@ -190,6 +184,11 @@ The study would aid coffee farmers and producers, by providing an automated syst
 	\item The study only focuses on Arabica green coffee beans;
 	
 	\item The study has two stages, the first stage would segregate the defective green coffee beans from the batch, then the second stage would identify the specialty-grade green coffee beans depending on its density;
+
+	\item The study will only consider the following metrics for classification: Color, Shape, Physical Characteristics, Density, and Texture.
+
+	\item The system is not designed to evaluate other coffee bean varieties or factors such as moisture content, different coffee bean origins, bean size beyond the allowed deviation, or post-roasting characteristics.
+
 \end{enumerate}
 
 \subsection{Delimitations}
@@ -203,6 +202,11 @@ The study would aid coffee farmers and producers, by providing an automated syst
 	\item Since the system is considering several types of defects and density parameter, sorting time is compromised;
 
 	\item The system is designed to perform individual scanning of each coffee bean;
+
+	\item Sizing will not be considered, as it may cause jamming in the system. However, a maximum size deviation of 20\% among beans will be allowed.
+
+	\item This study is limited to detecting only the most evident defect in a green coffee bean when multiple defects are present. The system prioritizes the most prominent defect based on visual characteristics and does not classify multiple defects per bean.
+
 \end{enumerate}
 
 \subsection{Overview of the Methodology}
@@ -211,10 +215,7 @@ The rapid advancements in computer engineering have led to innovative solutions 
 
 The study explores fundamental principles and technologies relevant to coffee bean classification, including machine vision, deep learning, and density-based sorting. By combining theoretical analysis with practical implementation, the proposed system aims to enhance sorting accuracy, reduce human labor, and improve efficiency and quality output in coffee production. 
 
-The study aims to develop a two-stage automated coffee bean sorting system using machine vision and density-based analysis to categorize and identify good and dense green coffee beans and segregate defective beans. First stage of the coffee bean sorting by segregating the defective beans from the rest. Then the second stage will then focus on sorting green coffee beans by identifying each bean’s density, with classification and processing achieved through density-based analysis. This approach ensures consistency and improve coffee sorting to aid farmers providing a high-accuracy method for coffee bean sorting.
-
 The study’s objective is to create a dataset consisting of 500 high-resolution images of Arabica specialty-grade green coffee beans from a certain origin, to ensure sufficient data for training and validation of the algorithm in the machine vision system. The system will capture real-time data on the visual and density characteristics of each green coffee beans, to aid coffee farmers from sorting each coffee bean efficiently. In the succeeding chapters, the study will delve into existing research on automated coffee bean sorting systems, with a focus on machine vision, density analysis, and their applications in the coffee industry. The study would explore gaps in current manual sorting practices and demonstrate the system’s ability to improve overall efficiency through implementing advanced technologies.
-
 
 \subsection{Estimated Work Schedule \& Budget}
 

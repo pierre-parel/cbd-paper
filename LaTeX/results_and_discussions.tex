@@ -38,14 +38,14 @@
 			
 			\Paste{SO1} & 
 			\begin{itemize}
-				\item Acquired 257 images of Black coffee beans
-				\item Gathered 301 images of Broken coffee beans
-				\item Gathered 305 images of Dried Cherry coffee beans
-				\item Acquired 288 images of Floater coffee beans
-				\item Acquired 301 images of Fungus Damage coffee beans
-				\item Gathered 1565 images of Good coffee beans
-				\item Acquired 345 images of Insect Damage coffee beans
-				\item Gathered 320 images of Sour coffee beans
+				\item Acquired 391 images of Black coffee beans
+				\item Gathered 259 images of Broken coffee beans
+				\item Gathered 359 images of Dried Cherry coffee beans
+				\item Acquired 260 images of Floater coffee beans
+				\item Acquired 255 images of Fungus Damage coffee beans
+				\item Gathered 1513 images of Good coffee beans
+				\item Acquired 370 images of Insect Damage coffee beans
+				\item Gathered 404 images of Sour coffee beans
 			\end{itemize} & 
 			
 			Sec.~\ref{sec:description_dataset} on p.~\pageref{sec:description_dataset} 
@@ -58,7 +58,7 @@
 				\item Achieved 22 beans per minute for stage one of the system
 			\end{itemize} 
 	
-			& Sec.~\ref{sec:sorting_speed} on p.~\pageref{sec:sorting_speed}
+			& Sec.~\ref{sec:sorting_speed_test} on p.~\pageref{sec:sorting_speed_test}
 			\\ \hline
 			
 			\Paste{SO3} & 
@@ -96,21 +96,21 @@
 	\toprule
 	\textbf{Class Name} & \textbf{Image Count} \\
 	\midrule
-	Black & 205 \\
-	Broken & 203 \\
-	Dried Cherry & 206 \\
-	Floater & 202 \\
-	Fungus Damage & 207 \\
-	Good & 604 \\
-	Insect Damage & 201 \\
-	Sour & 202 \\
+	Black & 391 \\
+	Broken & 259 \\
+	Dried Cherry & 359 \\
+	Floater & 260 \\
+	Fungus Damage & 255 \\
+	Good & 1513 \\
+	Insect Damage & 370 \\
+	Sour & 404 \\
 	\midrule
-	\textbf{Total} & \textbf{2030} \\
+	\textbf{Total} & \textbf{3811} \\
 	\bottomrule
 	\end{tabular}
 \end{table}
 
-Table \ref{tab:class_dist_summary} presents the dataset's class distribution after adjustments. The image counts for each category were increased such that the minimum is above 200, with "Good" exceeding 543; for instance, Black has 205 images and Good has 604 images. The table confirms a total of 2,030 images distributed across the eight classes, ensuring a balanced dataset that maintains diversity while meeting the minimum requirements.
+Table \ref{tab:class_dist_summary} presents the dataset's class distribution after adjustments. The image counts for each category were increased such that the minimum is above 200 and a minimum of 1500 images for Good beans; for instance, Black has 391 images and Good has 1513 images. The table confirms a total of 3811 images distributed across the eight classes, ensuring a balanced dataset that maintains diversity while meeting the minimum requirements.
 
 \begin{table}[H]
     \centering
@@ -121,137 +121,74 @@ Table \ref{tab:class_dist_summary} presents the dataset's class distribution aft
     \toprule
     \textbf{Split} & \textbf{Percentage} & \textbf{Image Count} & \textbf{Augmentation} \\
     \midrule
-    Train 		& 70\% & 1421 & Original training images are augmented three times \\
-    Validation 	& 20\% & 406 & Non-augmented \\
-    Test 		& 10\% & 203 & Non-augmented \\
+    Train 		& 70\% & 2668 & Original training images are augmented three times \\
+    Validation 	& 20\% & 762 & Non-augmented \\
+    Test 		& 10\% & 381 & Non-augmented \\
     \bottomrule
     \end{tabular}%
     }
 \end{table}
 
-Table \ref{tab:dataset_split_summary} outlines the dataset split into training, validation, and test sets. The training set comprises 70\% (1,421 images), while the validation and test sets account for 20\% (406 images) and 10\% (203 images) respectively, with the training images later augmented 3× per image.
+Table \ref{tab:dataset_split_summary} outlines the dataset split into training, validation, and test sets. The training set comprises 70\% (2,668 images), while the validation and test sets account for 20\% (762 images) and 10\% (381 images) respectively, with the training images later augmented 3× per image.
 
 \section{Performance of Classification Models on Custom Dataset}
 \label{sec:perf_custom_dataset}
-Four different classification models, such as EfficientNet, YOLOv8, YOLOv11 and YOLOv12, were benchmarked to determine the most optimal model to be used for the system. Each model was trained using a custom dataset manually gathered by the researchers. In addition, augmentations such as rotation, flip, blur and noise, were applied. 
+Five different classification models, such as EfficientNet, YOLOv8, YOLOv11, YOLOv12, and ViT were benchmarked to determine the most optimal model to be used for the system. Each model was trained using a custom dataset manually gathered by the researchers. In addition, augmentations such as rotation, flip, blur and noise, were applied. 
 
 \subsection{EfficientNetV2S}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{ch6/effnetv2_confusion_matrix.jpg} % replace with image path
+    \includegraphics[width=\textwidth]{ch6/norm_effnet_confmatrix.png} % replace with image path
     \caption{Normalized Confusion Matrix for EfficientNetV2S on Test Dataset}
     \label{fig:effnetv2s_conf_matrix}
 \end{figure}
 
-The confusion matrix depicted in Figure \ref{fig:effnetv2s_conf_matrix} shows how the EfficientNetV2 classification model performed against the validation dataset, where normalized values are used to represent percentage predictions by each class. The matrix is seen to indicate that even though EfficientNet was able to classify the Good bean class perfectly (1.00) and accurately for classes like Dried Cherry (0.97) and Black (0.94), its classification was poor for many defect classes. In particular, the model exhibited significant misclassification in the Broken bean class, with just 61\% correctly classified, while a significant 25\% were misclassified as Good. Likewise, for Floater and Fungus Damage, EfficientNetV2 had true positive rates of only 0.78 and 0.79, respectively, with some floaters being mistaken as Fungus Damage (11\%) and Sour (7.4\%). This trend indicates that EfficientNet found it difficult to identify subtle visual variations between defect types, particularly when texture or color change overlapped among classes. 
+EfficientNetV2 maintained competitive recognition for Black (95\%), Dried Cherry (100\%), and Good (98\%), but defect categories performed poorly. Fungus Damage was the weakest across all models (61\%), with extensive misclassification into Insect Damage and Sour. Broken scored only 77\%, spilling into Floater and Sour. Sour beans had 94\% recognition but with 29\% misclassified as Insect Damage. While good at separating distinct classes, this model struggles most with subtle defect patterns.
 
 \subsection{YOLOv8}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{ch6/yolov8_confusion_matrix.png} % replace with image path
+    \includegraphics[width=\textwidth]{ch6/norm_v8_confmatrix.png} % replace with image path
     \caption{Normalized Confusion Matrix for YOLOv8 on Test Dataset}
     \label{fig:yolov8_conf_matrix}
 \end{figure}
 
-The YOLOv8 confusion matrix shows excellent classification accuracy in the majority of defect classes, with exceptionally good performance in separating Dried Cherry, Floater, and Good beans, each of which had a perfect or near-perfect true positive rate (TPr) of 1.00, 1.00, and 0.99, respectively. The model also correctly classified Black beans at 0.95, reflecting excellent robustness in detecting strongly distinguishable visual features.However, there was some confusion between visually cimilar classes, like Fungus Damage, which had a true positive rate of 0.79. Misclassifications for the category were distributed between Insect Damage and Sour beans, at 2\% each, which would suggest some overlap in texture or color patterns that the model found difficulty in distinguishing. However, there was a lesser, but still significant confusion between Sour and Fungus Damage, where Sour beans were misclassified at 0.10 within other classes. The Insect Damage class performed well at 0.94, though there was some confusion (6\%) with Fungus Damage. Broken beans reached 0.91, with small misclassifications into Dried Cherry and others. Most importantly, there was no confusion with the Background class, indicating YOLOv8's excellent capability of isolating and detecting bean contours well. In general, YOLOv8 provides balanced performance, with satisfactory overall accuracy across different classes. 
+YOLOv8 achieved strong recognition for Black (98\%), Dried Cherry (100\%), Good (99\%), and Sour (100\%). However, it struggled with Fungus Damage (61\%), where a large share of samples were confused with Broken and Insect Damage. Broken was moderately accurate (85\%) but often mistaken as Floater. Insect Damage was fairly strong (94\%) yet confused back into Fungus Damage. The model excels at highly distinctive classes but struggles with visually similar defects.
 
 \subsection{YOLOv11-cls}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{ch6/yolov11_confusion_matrix.png} % replace with image path
+    \includegraphics[width=\textwidth]{ch6/norm_v11_confmatrix.png} % replace with image path
     \caption{Normalized Confusion Matrix for YOLOv11 on Test Dataset}
     \label{fig:yolov11_conf_matrix}
 \end{figure}
 
-The YOLOv11 confusion matrix shows significant gains in classification consistency, especially in visually different categories. The model obtained ideal classification (1.00) for both Good beans and Floater, which means a high capability to identify well-defined, good beans and floating defects. Likewise, excellent true positive rates were achieved for Black (0.97), Dried Cherry (0.97), and Broken (0.94) beans with limited confusion (at most 3\%) with adjacent defect classes, showing the robustness of YOLOv11 in detecting salient visual features. More complex defects, YOLOv11 achieved a true positive of 0.90 for Fungus Damage, though misclassification did occur into Sour beans (7\%) and Insect Damage (2\%), which points to some confusion between defects that have comparable texture degradation. The Insect Damage class achieved a strong 0.92, but was at times confused with Black and Fungus Damage, both by 3\%. The performance of the model slightly declined in the Sour bean class, which exhibited the lowest true positive rate of 0.89, with significant misclassifications to Fungus Damage (7\%), indicative of visual discoloration or wrinkling overlap. In general, YOLOv11 shows a good balance in performance, being excellent in clean categories and keeping stable results for complicated defect types. Its high precision with low false positives on most classes indicate its potential in real-time defect detection applications, with room for improvement through additional dataset augmentation for biologically deteriorated beans.
+YOLOv11 improved class balance compared to YOLOv8, with near-perfect results in Dried Cherry, Floater, and Good (all 99–100\%). Broken rose to 93\%, reducing cross-class errors. Fungus Damage remained difficult at 85\%, misclassified into Broken, Insect Damage, and Sour. Insect Damage achieved 95\% but still leaked into Fungus Damage. This model demonstrates more stability in defect-prone categories while maintaining high precision in separable classes.
 
 \subsection{YOLOv12-cls}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{ch6/yolov12_confusion_matrix.png} % replace with image path
+    \includegraphics[width=\textwidth]{ch6/norm_v12_confmatrix.png} % replace with image path
     \caption{Normalized Confusion Matrix for YOLOv12 on Test Dataset}
     \label{fig:yolov12_conf_matrix}
 \end{figure}
 
-The YOLOv12 performance, as reflected in the normalized confusion matrix, presents good classification performance for most defect classes. Most importantly, Sour beans and Good beans were classified with a true positive rate of 0.99, and Dried Cherry and Black beans followed closely with 0.99 and 0.96, respectively. This implies excellent sensitivity of the model to clearly distinguishable visual features, particularly those with color homogeneity and texture contrast. However, some defect types caused classification difficulties. Broken beans had the worst classification accuracy of 0.80, with high misclassifications spread over other classes like Dried Cherry, Floater, and Insect Damage, each contributing 1–2\% to the confusion. Likewise, Fungus Damage was classified correctly 88\% of the time, but exhibited confusion primarily with Insect Damage (5\%) and Good beans (2\%), meaning overlap of surface stain or odd texture. The Floater class was highly accurate at 0.97 and had little confusion. Insect Damage, despite maintaining a consistency of 0.92, had some misclassifications as Fungus Damage (10\%). Overall, YOLOv12 is a well-balanced and high-performing model, with leading accuracy in classes that have clear visual differences and moderate misclassification in Fungus and Insect-damaged beans, which are still visually complex. The performance of the model shows an enhanced capability to generalize between defect types.
+YOLOv12 presented mixed performance: Dried Cherry (96\%), Good (99\%), and Sour (100\%) stayed strong, but Broken collapsed to 73\%, with heavy confusion into Floater and Fungus Damage. Fungus Damage was moderate (87\%) but overlapped with Insect Damage (8\%). Insect Damage itself dropped to 89\%, reflecting this reciprocal confusion. Compared to YOLOv11, YOLOv12 was less stable on defect-heavy categories, showing variability despite strong results in clearer classes.
 
-\section{Actual Performance of Trained Models in the System}
-\label{sec:actual_performance}
-\begin{center}
-	\footnotesize
-	\setlength{\tabcolsep}{4pt}
-	\begin{longtable}{@{}>{\raggedright}p{1.8cm}>{\raggedright}p{1.2cm}cccccccc@{}}
-	\caption{Specific Performance of the Models for Each Defect}
-	\label{tab:specific_performance}\\
-	\toprule
-	\textbf{Model} & \textbf{Defect} & \textbf{TP} & \textbf{TN} & \textbf{FP} & \textbf{FN} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} & \textbf{Acc.} \\
-	\midrule
-	\endfirsthead
-	\toprule
-	\textbf{Model} & \textbf{Defect} & \textbf{TP} & \textbf{TN} & \textbf{FP} & \textbf{FN} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} & \textbf{Acc.} \\
-	\midrule
-	\endhead
-	\midrule
-	\multicolumn{10}{r}{{Continued on next page}} \\
-	\midrule
-	\endfoot
-	\bottomrule
-	\endlastfoot
-	
-	EffNetV2      		& Black        & 15 & 134 & 6 & 5 & 71.4 & 75.0 & 73.2 & 81.27 \\
-	YOLOv8               & Black        & 16 & 135 & 5 & 4 & 76.2 & 80.0 & 78.0 & 85.67 \\
-	YOLOv11              & Black        & 17 & 137 & 3 & 3 & 85.0 & 85.0 & 85.0 & 88.87 \\
-	YOLOv12              & Black        & 18 & 139 & 1 & 2 & 94.7 & 90.0 & 92.3 & 90.07 \\
-	\addlinespace
-	
-	EffNetV2      		& Broken       & 15 & 134 & 6 & 5 & 71.4 & 75.0 & 73.2 & 81.27 \\
-	YOLOv8               & Broken       & 16 & 135 & 5 & 4 & 76.2 & 80.0 & 78.0 & 85.67 \\
-	YOLOv11              & Broken       & 17 & 137 & 3 & 3 & 85.0 & 85.0 & 85.0 & 88.87 \\
-	YOLOv12              & Broken       & 18 & 139 & 1 & 2 & 94.7 & 90.0 & 92.3 & 90.07 \\
-	\addlinespace
-	
-	EffNetV2      		& Dried Cherry & 16 & 134 & 6 & 4 & 72.7 & 80.0 & 76.2 & 81.82 \\
-	YOLOv8               & Dried Cherry & 17 & 135 & 5 & 3 & 77.3 & 85.0 & 81.0 & 86.24 \\
-	YOLOv11              & Dried Cherry & 18 & 137 & 3 & 2 & 85.7 & 90.0 & 87.8 & 89.45 \\
-	YOLOv12              & Dried Cherry & 19 & 139 & 1 & 1 & 95.0 & 95.0 & 95.0 & 90.65 \\
-	\addlinespace
-	
-	EffNetV2      		& Floater      & 12 & 133 & 7 & 8 & 63.2 & 60.0 & 61.5 & 79.08 \\
-	YOLOv8               & Floater      & 13 & 134 & 6 & 7 & 68.4 & 65.0 & 66.7 & 83.40 \\
-	YOLOv11              & Floater      & 14 & 136 & 4 & 6 & 77.8 & 70.0 & 73.7 & 86.56 \\
-	YOLOv12              & Floater      & 15 & 138 & 2 & 5 & 88.2 & 75.0 & 81.1 & 87.78 \\
-	\addlinespace
-	
-	EffNetV2      & Fungus       & 16 & 134 & 6 & 4 & 72.7 & 80.0 & 76.2 & 81.82 \\
-	YOLOv8               & Fungus       & 17 & 135 & 5 & 3 & 77.3 & 85.0 & 81.0 & 86.24 \\
-	YOLOv11              & Fungus       & 18 & 137 & 3 & 2 & 85.7 & 90.0 & 87.8 & 89.45 \\
-	YOLOv12              & Fungus       & 19 & 139 & 1 & 1 & 95.0 & 95.0 & 95.0 & 90.65 \\
-	\addlinespace
-	
-	EffNetV2      		& Good         & 15 & 134 & 6 & 5 & 71.4 & 75.0 & 73.2 & 81.27 \\
-	YOLOv8               & Good         & 16 & 135 & 5 & 4 & 76.2 & 80.0 & 78.0 & 85.67 \\
-	YOLOv11              & Good         & 17 & 137 & 3 & 3 & 85.0 & 85.0 & 85.0 & 88.87 \\
-	YOLOv12              & Good         & 18 & 139 & 1 & 2 & 94.7 & 90.0 & 92.3 & 90.07 \\
-	\addlinespace
-	
-	EffNetV2      		& Insect       & 15 & 134 & 6 & 5 & 71.4 & 75.0 & 73.2 & 81.27 \\
-	YOLOv8               & Insect       & 16 & 135 & 5 & 4 & 76.2 & 80.0 & 78.0 & 85.67 \\
-	YOLOv11              & Insect       & 17 & 137 & 3 & 3 & 85.0 & 85.0 & 85.0 & 88.87 \\
-	YOLOv12              & Insect       & 18 & 139 & 1 & 2 & 94.7 & 90.0 & 92.3 & 90.07 \\
-	\addlinespace
-	
-	EffNetV2      		& Sour         & 16 & 134 & 6 & 4 & 72.7 & 80.0 & 76.2 & 81.82 \\
-	YOLOv8               & Sour         & 17 & 135 & 5 & 3 & 77.3 & 85.0 & 81.0 & 86.24 \\
-	YOLOv11              & Sour         & 18 & 137 & 3 & 2 & 85.7 & 90.0 & 87.8 & 89.45 \\
-	YOLOv12              & Sour         & 19 & 139 & 1 & 1 & 95.0 & 95.0 & 95.0 & 90.65 \\
-	\end{longtable}
-\end{center}
+\subsection{Vision Transformer (ViT)}
 
-Table \ref{tab:specific_performance} shows the detailed classification performance of four deep learning models, namely EfficientNetV2, YOLOv8, YOLOv11, and YOLOv12, trained on eight defect classes in green coffee beans. Every model's detection capability against individual defects is measured in terms of common evaluation metrics: True Positives (TP), True Negatives (TN), False Positives (FP), False Negatives (FN), Precision, Recall, F1-Score, and Accuracy. These metrics provide information on the classification performance of each model on various bean defects like Black, Broken, Dried Cherry, Floater, Fungus Damage, Good, Insect Damage, and Sour beans. It can be seen from the table that YOLOv12 produced highest per-class accuracy scores across different classes, having better generalization and detection performance on most of the classes. For example, its accuracy on Dried Cherry and Fungus Damage continued to be close to optimal, pointing towards its resilience in detecting sharply defined visual features. In contrast, EfficientNetV2 and YOLOv8 had greater class-to-class variability, with lower precision and recall for categories like Floater and Broken, probably because the faint visual similarities of these blemishes to other forms made them more challenging to distinguish.This chart emphasizes the level of detail per model, where YOLO-based models in general perform better than EfficientNetV2 when it comes to precision and recall, particularly on real-time classification tasks. There are still trade-offs in terms of performance noticed in defect types with shared visual features, showing that more comprehensive image preprocessing or feature enhancement may be needed for future versions.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{ch6/norm_v12_confmatrix.png} % replace with image path
+    \caption{Normalized Confusion Matrix for ViT on Test Dataset}
+    \label{fig:vit_conf_matrix}
+\end{figure}
+
+The ViT model delivered the most consistent results overall. Black and Dried Cherry were perfectly classified (100\%), while Good, Insect Damage, and Sour exceeded 97\%. Broken reached 92\%, with minor leakage into Floater and Fungus Damage. Floater held 93\% accuracy, though with 7\% misclassified as Broken. Fungus Damage was stronger than in other models (87\%) but still overlapped with Insect Damage (9\%). ViT demonstrates the best balance, minimizing confusion between defects while maintaining near-perfect performance in distinct classes.
 
 \begin{table}[ht]
 	\centering
@@ -261,23 +198,100 @@ Table \ref{tab:specific_performance} shows the detailed classification performan
 	\toprule
 	\textbf{Model} & \textbf{Precision (\%)} & \textbf{Recall (\%)} & \textbf{F1-Score (\%)} & \textbf{Accuracy (\%)} \\
 	\midrule
-	EfficientNetV2 & 70.86 & 75.00 & 72.86 & 81.20 \\
-	YOLOv8        & 75.64 & 80.00 & 77.71 & 85.60 \\
-	YOLOv11       & 84.36 & 85.00 & 84.64 & 88.80 \\
-	YOLOv12       & 94.00 & 90.00 & 91.91 & 90.00 \\
+	EfficientNetV2 & 87.90 & 87.08 & 87.08 & 98.02 \\
+	YOLOv8        & 91.14 & 90.41 & 90.55 & 98.65 \\
+	YOLOv11       & 92.97 & 93.71 & 93.19 & 98.90 \\
+	YOLOv12       & 91.97 & 91.20 & 91.47 & 98.64 \\
+	\textbf{ViT}  & \textbf{95.85} & \textbf{95.76} & \textbf{95.77} & \textbf{99.35} \\
 	\bottomrule
 	\end{tabular}
 \end{table}
 
-Table \ref{tab:model_performance} summarizes the overall performance of each classification model by presenting average Precision, Recall, F1-Score, and Accuracy for all defect types. This general overview enables comparison of each model's overall performance regardless of particular defect classes. We can see that YOLOv12 performs the best among all the models with the best average accuracy of 90.0\%, and well-balanced precision and recall. This confirms its good detection consistency and minimal false positives across the trials during the actual testing. YOLOv11 and YOLOv8 are close second and third, with average accuracies of 88.8\% and 85.6\%, respectively, showing consistent performance but with slightly higher misclassification rates. EfficientNetV2, although effective in detecting significant defects, had the poorest performance at 81.2\% accuracy. 
+Table \ref{tab:model_performance} shows that EfficientNetV2 had the weakest performance, with the lowest precision, recall, F1-score, and accuracy. The YOLO models improved on these results, with YOLOv11 performing slightly better than YOLOv8 and YOLOv12. Among all, ViT achieved the highest scores across all metrics, showing the best ability to classify the test dataset with minimal errors. Overall, performance increases from EfficientNetV2 to YOLO, with ViT giving the most reliable results.
 
+\section{Actual Performance of Classification Models in the System}
+
+Among the 5 models, YOLOv12 and ViT achieved the highest performance. Thus, these two models were tested and deployed on the actual system. To measure the performance of the two models, two types of tests were conducted. The first test was conducted to measure the models’ performances on classifying different defect types, and the other test was dedicated to measuring the models’ performances when classifying Good and Defective beans . The first test set was composed of 30 beans per defect and 150 good beans, with a total of 360 beans. For each trial, the testing was divided into 8, corresponding to each classification. True Positives (TP) are the number of samples from a defect type that were correctly classified as that defect. False Negatives (FN) are the number of samples from a defect type that were misclassified as something else. Per-class accuracy was computed for each trial and the average accuracy across all trials. On the other hand, the second test was composed of 100 beans per trial, wherein each trial had a varying distribution of good and defective beans. In this test, TP is the number of good beans classified as good, TN is the number of defective beans classified as defects, FP is the number of defective beans misclassified as good, and FN is the number of good beans misclassified as defects. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ch6/Actual_Performance_of_YOLOv12_p1.png}
+    \label{fig:actual_performance_v12}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ch6/Actual_Performance_of_YOLOv12_p2.png}
+    \caption{Actual Performance of YOLOv12 in the System (Per-Classification)}
+    \label{fig:actual_performance_v12}
+\end{figure}
+Table \ref{fig:actual_performance_v12} represents the actual performance of YOLOv12 when deployed into the system. Across five trials, the results showed that the model achieved promising accuracy in certain categories like Insect Damage and Sour, where an accuracy of 100\% in some trials were recorded. Most importantly, the model’s performance on Good beans classification was highly reliable achieving 96-97\% across the different trials. However, it was observed that the model struggled with other categories such as Black, Broken, Fungus Damage, and Dried Cherry, achieving an accuracy score of only around 70-80\%. The overall accuracy of YOLOv12 across all the trials was 86.4\%, which is already reliable especially for detecting Good vs Defective beans. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ch6/Actual_Performance_of_ViT_p1.png}
+    \label{fig:actual_performance_vit}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ch6/Actual_Performance_of_ViT_p2.png}
+    \caption{Actual Performance of ViT in the System (Per-Classification)}
+    \label{fig:actual_performance_vit}
+\end{figure}
+In Table \ref{fig:actual_performance_vit}, the performance of the Vision Transformer (ViT) model across all five trials were presented. The recorded data shows that ViT was more consistent than the YOLOv12, achieving very high accuracy scores in classifying Black, Dried Cherry, Floater, Sour, and Good beans. It was observed that the model even achieved perfect accuracies on these classifications on some trials. On the other hand, the model’s performance on classifying Broken beans was slightly lower but still reliable, achieving an accuracy between 86-90%. Across all five trials, the overall accuracy of the model was around 96%, which is a significant improvement from YOLOv12. This demonstrates that ViT not only generalized well across multiple defect categories, but also maintained consistency during repeated testing.
+
+\begin{table}[ht]
+	\centering
+	\small
+	\caption{Actual Performance of YOLOv12 in the System (Good vs. Defect)}
+	\begin{tabularx}{\linewidth}{@{}>{\raggedright}X c c c c c@{}}
+	\toprule
+	\textbf{Test Condition} & \textbf{TP} & \textbf{TN} & \textbf{FP} & \textbf{FN} & \textbf{Accuracy (\%)} \\
+	\midrule
+	100\% Good Beans & 89 & 0 & 0 & 11 & 89 \\
+	75\% Good, 25\% Defective & 71 & 24 & 1 & 4 & 95 \\
+	50\% Good, 50\% Defective & 49 & 49 & 1 & 1 & 98 \\
+	25\% Good, 75\% Defective & 23 & 72 & 3 & 2 & 95 \\
+	100\% Defective Beans & 0 & 97 & 3 & 0 & 97 \\
+	\bottomrule
+	\textbf{Average Accuracy} & & & & & \textbf{94.8} \\
+	\end{tabularx}
+	\label{tab:yolov12_good_defective}
+\end{table}
+
+Table \ref{tab:yolov12_good_defective} presents the performance of YOLOv12 on classifying good and defective beans under varying test conditions. Compared to the model’s per-classification performance, the results demonstrated higher accuracy  when classifying good and defective beans. The model achieved an average accuracy of  94.8\% across all trials with varying test conditions. These findings indicate that YOLOv12 can be a reliable model when simply sorting between the two classifications.
+
+\begin{table}[ht]
+	\centering
+	\small
+	\caption{Actual Performance of ViT in the System (Good vs. Defect)}
+	\begin{tabularx}{\linewidth}{@{}>{\raggedright}X c c c c c@{}}
+	\toprule
+	\textbf{Test Condition} & \textbf{TP} & \textbf{TN} & \textbf{FP} & \textbf{FN} & \textbf{Accuracy (\%)} \\
+	\midrule
+	100\% Good Beans & 100 & 0 & 0 & 0 & 100 \\
+	75\% Good, 25\% Defective & 72 & 24 & 1 & 3 & 96 \\
+	50\% Good, 50\% Defective & 48 & 50 & 0 & 2 & 98 \\
+	25\% Good, 75\% Defective & 23 & 75 & 0 & 2 & 98 \\
+	100\% Defective Beans & 0 & 98 & 2 & 0 & 98 \\
+	\bottomrule
+	\textbf{Average Accuracy} & & & & & \textbf{98} \\
+	\end{tabularx}
+	\label{tab:vit_good_defective}
+\end{table}
+
+On the other hand, Table \ref{tab:vit_good_defective} presents the data on the performance of ViT model under varying proportions of good and defective beans. The model achieved an average accuracy of 98\% across all five trials, which was similar to its per-classification accuracy. Thus, showing reliability and consistency on its accuracy on both per-classification testing (defect types) and binary testing (good and defect).
+
+\newpage
 \section{Sorting Speed}
+
 \label{sec:sorting_speed}
 \begin{table}[ht]
 	\centering
 	\small
 	\caption{Sorting Speed Test Conditions}
-	\label{tab:sorting_speed}
+	\label{tab:sorting_speed_test}
 	\begin{tabularx}{\linewidth}{@{}>{\raggedright}X c c c@{}}
 	\toprule
 	\textbf{Test Condition} & \textbf{Conveyor (RPM)} & \textbf{Inspection (RPM)} & \textbf{Sorting (Beans/min)} \\
@@ -290,4 +304,14 @@ Table \ref{tab:model_performance} summarizes the overall performance of each cla
 	\bottomrule
 	\end{tabularx}
 \end{table}
-Table \ref{tab:sorting_speed} presents the prototype system's sorting speed performance under different test conditions. The conveyor table speed and inspection tray motor speed is constant at 175 RPM and 343 RPM, respectively, to ensure consistency in all trials. The sorting speed, expressed in beans per minute, indicates the system's capacity to recognize and process coffee beans. The outcomes indicate that the system maintained a steady average sorting rate of 22 beans per minute in most conditions, such as 100\% good beans, 80:20, and 100\% defective beans. The minimal drop to 21 beans per minute under the 70\% good and 30\% defective condition could be due to the long wait time for the beans to fall onto the inspection tray. On the other hand, the peak sorting rate of 24 beans per minute under the 50:50 condition indicates that the system's classification and actuations were synchronized. Overall, the prototype proves to have stable and consistent sorting throughput. The results confirm that the system can work at a steady speed appropriate for small-scale processing operations without degradation in performance by the number of defective beans.
+Table \ref{tab:sorting_speed_test} presents the prototype system's sorting speed performance under different test conditions. The conveyor table speed and inspection tray motor speed is constant at 175 RPM and 343 RPM, respectively, to ensure consistency in all trials. The sorting speed, expressed in beans per minute, indicates the system's capacity to recognize and process coffee beans. The outcomes indicate that the system maintained a steady average sorting rate of 22 beans per minute in most conditions, such as 100\% good beans, 80:20, and 100\% defective beans. The minimal drop to 21 beans per minute under the 70\% good and 30\% defective condition could be due to the long wait time for the beans to fall onto the inspection tray. On the other hand, the peak sorting rate of 24 beans per minute under the 50:50 condition indicates that the system's classification and actuations were synchronized. Overall, the prototype proves to have stable and consistent sorting throughput. The results confirm that the system can work at a steady speed appropriate for small-scale processing operations without degradation in performance by the number of defective beans.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ch6/Actual_Density_Sorting_Performance.png}
+    \caption{Actual Density Sorting Performance}
+    \label{fig:actual_density_sorting_performance}
+\end{figure}
+
+Table \ref{fig:actual_density_sorting_performance} presents the results of five trials evaluating the density sorting mechanism. The system consistently classified dense beans with high accuracy, ranging from 90.57\% to 94.34\%, showing that the sorter was generally reliable in distinguishing beans with higher density. In contrast, the classification of less dense beans fluctuated more significantly, with accuracies between 70.00\% and 90.00\%, indicating that this category posed greater difficulty for the system. Overall accuracies across the trials remained relatively stable, ranging from 90.48\% to 92.06\% with an average accuracy of 90.89\%, which demonstrates consistent sorting performance but also highlights that occasional misclassifications prevented the system from reaching perfect accuracy. These findings suggest that while the sorter is effective in identifying dense beans, improvements may be needed in refining the sensitivity of the system to reliably classify less dense beans.
+

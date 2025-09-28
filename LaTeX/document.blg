@@ -178,45 +178,47 @@ Warning--I didn't find a database entry for "padhye"
 Warning--I didn't find a database entry for "sorace"
 Warning--I didn't find a database entry for "wassenberg"
 Warning--I didn't find a database entry for "misc-minimal"
-You've used 37 entries,
+Warning--empty journal in Dosovitskiy_Beyer_Kolesnikov_Weissenborn_Zhai_Unterthiner_Dehghani_Minderer_Heigold_Gelly_2021
+Warning--there's a number but no volume in Dosovitskiy_Beyer_Kolesnikov_Weissenborn_Zhai_Unterthiner_Dehghani_Minderer_Heigold_Gelly_2021
+You've used 39 entries,
             1935 wiz_defined-function locations,
-            866 strings with 15356 characters,
-and the built_in function-call counts, 13997 in all, are:
-= -- 1365
-> -- 631
+            881 strings with 16311 characters,
+and the built_in function-call counts, 15255 in all, are:
+= -- 1471
+> -- 737
 < -- 21
-+ -- 222
-- -- 212
-* -- 1145
-:= -- 2488
-add.period$ -- 102
-call.type$ -- 37
-change.case$ -- 289
-chr.to.int$ -- 37
-cite$ -- 37
-duplicate$ -- 536
-empty$ -- 909
-format.name$ -- 261
-if$ -- 2706
++ -- 264
+- -- 252
+* -- 1276
+:= -- 2717
+add.period$ -- 109
+call.type$ -- 39
+change.case$ -- 319
+chr.to.int$ -- 39
+cite$ -- 41
+duplicate$ -- 563
+empty$ -- 965
+format.name$ -- 303
+if$ -- 2932
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 25
-newline$ -- 177
-num.names$ -- 111
-pop$ -- 254
+missing$ -- 27
+newline$ -- 188
+num.names$ -- 117
+pop$ -- 282
 preamble$ -- 1
-purify$ -- 291
+purify$ -- 321
 quote$ -- 0
-skip$ -- 423
+skip$ -- 442
 stack$ -- 0
-substring$ -- 863
-swap$ -- 74
+substring$ -- 928
+swap$ -- 75
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 220
-warning$ -- 0
-while$ -- 104
+type$ -- 232
+warning$ -- 2
+while$ -- 109
 width$ -- 0
-write$ -- 450
-(There were 149 warnings)
+write$ -- 477
+(There were 151 warnings)

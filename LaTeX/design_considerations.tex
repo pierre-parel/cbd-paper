@@ -43,32 +43,37 @@ In measuring the density of the coffee bean there are a number ways this can be 
 
 \begin{figure}[H]
     \centering
+    \includegraphics[width=6cm]{ch4/Arduino_Uno.png} % replace with image path
+    \caption{Arduino UNO Microcontroller}
+    \label{fig:arduino_uno}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
     \includegraphics[width=6cm]{ch4/Arduino_Nano_Microcontroller.png} % replace with image path
     \caption{Arduino Nano Microcontroller}
     \label{fig:arduino_nano}
 \end{figure}
 
-Since the system is composed of two stages of sorting: defect sorting through computer vision and density-based analysis–the group decided to utilize two Arduino Nano microcontrollers to modularize the control process. The first Arduino Nano microcontroller is tasked to handle the computer vision-based defect sorting through serial communication with OpenCv operating in Python. In addition, it handles the operation of defect sorting consisting of a stepper motor for the rotation of the inspection tray and a servo motor for the slider, which directs the beans to the designated bin (defect or good bin). On the other hand, the second Arduino Nano microcontroller manages the density-based analysis and sorting, which consists of another stepper motor to direct the beans to its respective bin (dense and less-dense bin), the precision scale which is interfaced through RS232, and the top feeder where the input beans are poured. The use of separate Arduino microcontrollers is advantageous when it comes to the computer vision-based sorting of beans. This is because serial communication is much faster when code complexity is significantly reduced. With this, a designated microcontroller handles the computer vision part and two-way serial communication between the microcontroller and the computer vision algorithm running in Python. Most importantly, the use of two microcontrollers allowed the system to not rely solely on a sequential approach. This means that the two stages of sorting are not relying on the timing of each other, allowing the inspection tray and the top feeder to operate independently. Thus, resulting in a much faster and efficient sorting process. 
+Since the system is composed of two stages of sorting–defect sorting through computer vision and density-based analysis–the group decided to utilize two Arduino UNO and one Arduino Nano microcontrollers to modularize the control process. 
+
+The first Arduino Uno microcontroller is tasked to handle the computer vision-based defect sorting through serial communication with OpenCv operating in Python. In addition, it handles the operation of defect sorting consisting of a stepper motor for the rotation of the inspection tray and a servo motor for the slider, which directs the beans to the designated bin (defect or good bin). 
+
+On the other hand, the second Arduino UNO microcontroller manages the density-based analysis and sorting, which consists of another stepper motor to direct the beans to its respective bin (dense and less-dense bin), the precision scale which is interfaced through RS232, and the top feeder where the input beans are poured. 
+
+The use of separate Arduino microcontrollers is advantageous when it comes to the computer vision-based sorting of beans. This is because serial communication is much faster when code complexity is significantly reduced. With this, a designated microcontroller handles the computer vision part and two-way serial communication between the microcontroller and the computer vision algorithm running in Python. Most importantly, the use of two microcontrollers allowed the system to not rely solely on a sequential approach. This means that the two stages of sorting are not relying on the timing of each other, allowing the inspection tray and the top feeder to operate independently. Thus, resulting in a much faster and efficient sorting process. 
+
 
 \subsection{Sensors}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=6cm]{ch4/Infrared_Sensor.jpg} % replace with image path
+    \includegraphics[width=6cm]{ch4/IR_sensor.png} % replace with image path
     \caption{Infrared Sensor}
     \label{fig:infrared_sensor}
 \end{figure}
 
 To ensure that the beans are falling in a one-by-one manner onto the inspection tray, the group placed an IR sensor at the edge of the top feeder. This IR sensor triggers the DC motor that runs the feeder to stop, and runs small steps until the bean is dropped. The addition of the IR sensor at the edge of the feeder allows the motor to run continuously until another bean is detected. With this, the waiting time for the next bean at the inspection tray is significantly lessened. 
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=6cm]{ch4/TOF10120.png} % replace with image path
-    \caption{TOF10120}
-    \label{fig:tof10120}
-\end{figure}
-
-TOF10120 or Time of Flight sensor is utilized in the system due to its high precision, non-contact measurement capability. This sensor is used to estimate the volume of each bean, which is essential for computing the density. In the second stage of sorting, where beans are classified based on density, the sensor plays a crucial role in determining the approximate volume of each bean by measuring its height or dimensions as it passes through the system.
 
 \subsection{Motor control}
 
@@ -131,45 +136,6 @@ For the top feeder mechanism, a step-up module is needed to supply the sufficien
 \end{figure}
 
 The system requires clear images of the coffee beans for accurate processing by the detection and classification models. Two C920 cameras will be used to capture images from opposite sides of each bean—one positioned on top and the other at the bottom. The captured images will then be processed within the laptop using the detection and classification models to identify and categorize the beans.
-
-\subsection{Object Detection and Classification Models}
-
-The object detection model identifies and isolates the coffee beans from the background. For this task, different models were explored:
-
-\begin{enumerate}
-	\item \textbf{RF-DETR}
-	 
-	A transformer-based object detection model that eliminates the need for anchor boxes, improving small object detection.
-
-	\item \textbf{YOLOv11}
-	
-	A CNN-based YOLO variant that incorporates the C3k2 block, SPPF, and C2PSA components to enhance feature extraction and detection accuracy.
-
-	\item \textbf{YOLOv12}
-	
-	The latest YOLO version and attention-centric model that integrates transformer-based components to enhance performance while maintaining real-time efficiency.
-\end{enumerate}
-
-\subsection{Object Classification Models}
-Following detection, each identified coffee bean was cropped and classified based on its defect type. The classification models used included:
-
-\begin{enumerate}
-	\item \textbf{EfficientNetV2}
-	 
-	A convolutional neural network (CNN) designed for high efficiency and accuracy, balancing computational cost and performance.
-	
-	\item \textbf{YOLOv8}
-	
-	A lightweight yet highly accurate model that supports both object detection and classification, making it suitable for real-time applications.
-
-	\item \textbf{YOLOv11}
-	
-	A classification-specific adaptation of YOLOv11, leveraging enhanced feature extraction techniques for defect recognition.
-	
-	\item \textbf{YOLOv12}
-	
-	A classification variant of YOLOv12, incorporating advanced attention mechanisms to improve accuracy.
-\end{enumerate}
 
 \section{Serial Communication}
 

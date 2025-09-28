@@ -5,32 +5,32 @@
 \contentsline {table}{\numberline {1.4}{\ignorespaces Budget Plan}}{15}{table.caption.15}%
 \addvspace {10pt}
 \contentsline {table}{\numberline {2.1}{\ignorespaces Review of Related Literature}}{18}{table.2.1}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Comparing Proposed Study and Existing Studies}}{26}{table.2.2}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Comparing Proposed Study and Existing Studies}}{27}{table.2.2}%
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {5.1}{\ignorespaces Summary of methods for reaching the objectives}}{57}{table.5.1}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Sorting Speed Testing Table}}{91}{table.5.2}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Good Bean Classification Accuracy Testing Table}}{92}{table.5.3}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Specific Defect Classification Accuracy Testing Table}}{93}{table.5.4}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Dataset Distribution for Overall Testing}}{94}{table.5.5}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Summary of methods for reaching the objectives}}{56}{table.5.1}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Classification Algorithm for Coffee Beans}}{74}{table.caption.44}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Sorting Speed Testing Table}}{97}{table.5.3}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Dataset Distribution for Overall Testing}}{101}{table.5.4}%
 \addvspace {10pt}
-\contentsline {table}{\numberline {6.1}{\ignorespaces Summary of results for achieving the objectives}}{96}{table.6.1}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Class Distribution Summary}}{99}{table.caption.61}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces Dataset Split Summary}}{99}{table.caption.62}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces Specific Performance of the Models for Each Defect}}{108}{table.6.4}%
-\contentsline {table}{\numberline {6.5}{\ignorespaces Model Performance Comparison}}{111}{table.caption.67}%
-\contentsline {table}{\numberline {6.6}{\ignorespaces Sorting Speed Test Conditions}}{112}{table.caption.68}%
-\addvspace {10pt}
-\addvspace {10pt}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Summary of results for achieving the objectives}}{104}{table.6.1}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Class Distribution Summary}}{107}{table.caption.66}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Dataset Split Summary}}{107}{table.caption.67}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Model Performance Comparison}}{118}{table.caption.73}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces Actual Performance of YOLOv12 in the System (Good vs. Defect)}}{124}{table.caption.78}%
+\contentsline {table}{\numberline {6.7}{\ignorespaces Actual Performance of ViT in the System (Good vs. Defect)}}{124}{table.caption.79}%
+\contentsline {table}{\numberline {6.9}{\ignorespaces Sorting Speed Test Conditions}}{125}{table.caption.80}%
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {C.1}{\ignorespaces Summary of Revisions to the Proposal}}{125}{table.C.1}%
 \addvspace {10pt}
-\contentsline {table}{\numberline {D.1}{\ignorespaces Summary of Revisions to the Thesis}}{131}{table.D.1}%
 \addvspace {10pt}
-\contentsline {table}{\numberline {E.1}{\ignorespaces Feasible triples for highly variable grid}}{153}{table.E.1}%
-\contentsline {table}{\numberline {E.2}{\ignorespaces Calculation of $y = x^n$}}{157}{table.caption.100}%
+\contentsline {table}{\numberline {C.1}{\ignorespaces Summary of Revisions to the Proposal}}{140}{table.C.1}%
+\addvspace {10pt}
+\contentsline {table}{\numberline {D.1}{\ignorespaces Summary of Revisions to the Thesis}}{146}{table.D.1}%
+\addvspace {10pt}
+\contentsline {table}{\numberline {E.1}{\ignorespaces Feasible triples for highly variable grid}}{168}{table.E.1}%
+\contentsline {table}{\numberline {E.2}{\ignorespaces Calculation of $y = x^n$}}{172}{table.caption.113}%
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsfinish 

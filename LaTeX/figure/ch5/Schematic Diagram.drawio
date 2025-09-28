@@ -1,0 +1,126 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36" version="28.2.5">
+  <diagram name="Page-1" id="mOecwNb8b47rVrpIsAHw">
+    <mxGraphModel dx="942" dy="1182" grid="1" gridSize="2" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-38" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;align=center;" vertex="1" parent="1">
+          <mxGeometry x="260" y="470" width="520" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;align=center;" vertex="1" parent="1">
+          <mxGeometry x="118" y="142" width="662" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-11" value="&lt;b&gt;Stage 1: Defect Sorting and Image Processing&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="331.5" y="154" width="235" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-14" value="OpenCV&lt;div&gt;(Laptop)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="298.5" y="191" width="72.5" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-17" value="Arduino 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="501" y="191" width="72.5" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="IDIAYHCEkWF1TnGjeSVH-14" target="IDIAYHCEkWF1TnGjeSVH-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-25" value="Camera 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="143.5" y="191" width="120" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-26" value="Camera 2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="143.5" y="292" width="120" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.004;entryY=0.221;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="IDIAYHCEkWF1TnGjeSVH-25" target="IDIAYHCEkWF1TnGjeSVH-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="297.5" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.004;entryY=0.785;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="IDIAYHCEkWF1TnGjeSVH-26" target="IDIAYHCEkWF1TnGjeSVH-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-30" value="Stepper Motor&amp;nbsp;&lt;div&gt;Nema 17&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="608.5" y="191" width="120" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-31" value="Servo Motor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="608.5" y="292" width="120" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="IDIAYHCEkWF1TnGjeSVH-32" target="IDIAYHCEkWF1TnGjeSVH-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="IDIAYHCEkWF1TnGjeSVH-32" target="IDIAYHCEkWF1TnGjeSVH-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="IDIAYHCEkWF1TnGjeSVH-32" target="IDIAYHCEkWF1TnGjeSVH-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-32" value="12V Power Supply" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="585.5" y="401" width="87" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="IDIAYHCEkWF1TnGjeSVH-30">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="574" y="229" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.001;entryY=0.78;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="IDIAYHCEkWF1TnGjeSVH-31" target="IDIAYHCEkWF1TnGjeSVH-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-39" value="&lt;b&gt;Stage 2: Density Sorting&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;and Feeder Mechanism&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="402.5" y="690" width="235" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-41" value="Arduino 2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="501" y="502" width="72.5" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-47" value="6V DC Motor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="608.5" y="502" width="120" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-48" value="Stepper Motor&lt;div&gt;Nema 17&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="608.5" y="603" width="120" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="IDIAYHCEkWF1TnGjeSVH-47">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="574" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.001;entryY=0.78;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="IDIAYHCEkWF1TnGjeSVH-48" target="IDIAYHCEkWF1TnGjeSVH-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-53" value="Serial Communication" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="366.5" y="249" width="139" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="IDIAYHCEkWF1TnGjeSVH-55" target="IDIAYHCEkWF1TnGjeSVH-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-55" value="Precision Scale" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="281" y="552.5" width="78" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="IDIAYHCEkWF1TnGjeSVH-56" target="IDIAYHCEkWF1TnGjeSVH-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-56" value="RS232" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="394" y="569.5" width="73" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="IDIAYHCEkWF1TnGjeSVH-61" target="IDIAYHCEkWF1TnGjeSVH-47">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="744" y="478" />
+              <mxPoint x="744" y="478" />
+              <mxPoint x="744" y="541" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-61" value="Step-Down Module" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="707" y="411.5" width="73" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="IDIAYHCEkWF1TnGjeSVH-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="398" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="390" y="398" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IDIAYHCEkWF1TnGjeSVH-65" value="Serial Communication" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="259" y="423" width="135" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

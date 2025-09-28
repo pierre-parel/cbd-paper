@@ -8,63 +8,73 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Theoretical Framework}}{30}{figure.caption.20}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Conceptual Framework}}{31}{figure.caption.21}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Screw Feeder Diagram}}{39}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Rotating Conveyor Table 3D Design, 32-inch Rotary Table Accumulator (RTA)}}{40}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Inspector Tray 3D Design}}{41}{figure.caption.24}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Arduino Nano Microcontroller}}{42}{figure.caption.25}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Infrared Sensor}}{44}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces TOF10120}}{45}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Screw Feeder Diagram}}{40}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Rotating Conveyor Table 3D Design, 32-inch Rotary Table Accumulator (RTA)}}{41}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Inspector Tray 3D Design}}{42}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Arduino UNO Microcontroller}}{43}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Arduino Nano Microcontroller}}{44}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Infrared Sensor}}{45}{figure.caption.27}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces 12V NEMA 17 Stepper Motor}}{46}{figure.caption.28}%
 \contentsline {figure}{\numberline {4.8}{\ignorespaces 6V DC Motor}}{47}{figure.caption.29}%
 \contentsline {figure}{\numberline {4.9}{\ignorespaces TB6612FNG Motor Driver}}{47}{figure.caption.30}%
 \contentsline {figure}{\numberline {4.10}{\ignorespaces 12V Power Supply}}{48}{figure.caption.31}%
 \contentsline {figure}{\numberline {4.11}{\ignorespaces MT3608 Step-Up Module}}{49}{figure.caption.32}%
 \contentsline {figure}{\numberline {4.12}{\ignorespaces C920 Camera}}{49}{figure.caption.33}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Graphical User Interface}}{52}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Graphical User Interface}}{51}{figure.caption.34}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces System Block Diagram}}{59}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Schematic Diagram of the System}}{60}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Design Overview of the System}}{61}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Design and Development Research (DDR) Methodology}}{62}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Data Collection Process}}{63}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Manual Sorting Process}}{64}{figure.caption.40}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces First Iteration of Data Collection Setup}}{66}{figure.caption.41}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Sample Images from the First Iteration of Dataset Collection}}{67}{figure.caption.42}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Sample Images from the Second Iteration of Dataset Collection}}{68}{figure.caption.43}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Screw Feeder 3D Design}}{74}{figure.caption.44}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Rotating Conveyor Table 3D Design}}{75}{figure.caption.45}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Rotating Conveyor Table with Aluminum Guides}}{76}{figure.caption.46}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Rotating Conveyor Table with IR Sensor}}{77}{figure.caption.47}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Inspection Tray 3D Design}}{78}{figure.caption.48}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Precision Scale}}{79}{figure.caption.49}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Serial Communication Flow for Stage 1 Classification}}{80}{figure.caption.50}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Precision Scale Integration with RS232 for Stage 2 Classification}}{81}{figure.caption.51}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Actual System Setup}}{83}{figure.caption.52}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces First Iteration of Lighting Setup}}{86}{figure.caption.53}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Second Iteration of Lighting Setup}}{87}{figure.caption.54}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Final Iteration of Lighting Setup}}{88}{figure.caption.55}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Top and Bottom View of the Cameras}}{89}{figure.caption.56}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces System Block Diagram}}{58}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Schematic Diagram of the System}}{59}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Design Overview of the System}}{60}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Design and Development Research (DDR) Methodology}}{61}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Data Collection Process}}{62}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Manual Sorting Process}}{63}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces First Iteration of Data Collection Setup}}{65}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Sample Images from the First Iteration of Dataset Collection}}{66}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Sample Images from the Second Iteration of Dataset Collection}}{67}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Screw Feeder 3D Design}}{77}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Rotating Conveyor Table 3D Design}}{78}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Rotating Conveyor Table with Aluminum Guides}}{79}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Revised Rotating Conveyor Table}}{80}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces 3D Printed Guides}}{81}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces IR Sensor Placement}}{82}{figure.caption.50}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Inspection Tray 3D Design}}{83}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Density Sorter Mechanism Design}}{84}{figure.caption.52}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Precision Scale}}{85}{figure.caption.53}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Serial Communication Flow for Stage 1 Classification}}{86}{figure.caption.54}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Precision Scale Integration with RS232 for Stage 2 Classification}}{88}{figure.caption.55}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Actual System Setup (1st Iteration)}}{89}{figure.caption.56}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Actual System Setup (2nd Iteration)}}{90}{figure.caption.57}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces First Iteration of Lighting Setup}}{92}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Second Iteration of Lighting Setup}}{93}{figure.caption.59}%
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Final Iteration of Lighting Setup}}{94}{figure.caption.60}%
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Top and Bottom View of the Cameras}}{95}{figure.caption.61}%
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Per-Classification Test Dataset}}{99}{figure.caption.63}%
+\contentsline {figure}{\numberline {5.28}{\ignorespaces Good vs. Defective Test Dataset}}{100}{figure.caption.64}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Normalized Confusion Matrix for EfficientNetV2S on Test Dataset}}{101}{figure.caption.63}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Normalized Confusion Matrix for YOLOv8 on Test Dataset}}{103}{figure.caption.64}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Normalized Confusion Matrix for YOLOv11 on Test Dataset}}{105}{figure.caption.65}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Normalized Confusion Matrix for YOLOv12 on Test Dataset}}{107}{figure.caption.66}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Normalized Confusion Matrix for EfficientNetV2S on Test Dataset}}{109}{figure.caption.68}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Normalized Confusion Matrix for YOLOv8 on Test Dataset}}{111}{figure.caption.69}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Normalized Confusion Matrix for YOLOv11 on Test Dataset}}{113}{figure.caption.70}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Normalized Confusion Matrix for YOLOv12 on Test Dataset}}{115}{figure.caption.71}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Normalized Confusion Matrix for ViT on Test Dataset}}{117}{figure.caption.72}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Actual Performance of YOLOv12 in the System (Per-Classification)}}{121}{figure.caption.75}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Actual Performance of ViT in the System (Per-Classification)}}{123}{figure.caption.77}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Actual Density Sorting Performance}}{126}{figure.caption.81}%
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {E.1}{\ignorespaces A quadrilateral image example.}}{147}{figure.caption.94}%
-\contentsline {figure}{\numberline {E.2}{\ignorespaces Figures on top of each other. See List.~\ref {lst:figsontop} for the corresponding \LaTeX \ code. }}{149}{figure.caption.96}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces A sub-figure in the top row.}}{149}{figure.caption.96}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces A sub-figure in the middle row.}}{149}{figure.caption.96}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces A sub-figure in the bottom row.}}{149}{figure.caption.96}%
-\contentsline {figure}{\numberline {E.3}{\ignorespaces Four figures in each corner. See List.~\ref {lst:fourfigs} for the corresponding \LaTeX \ code.}}{151}{figure.caption.98}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces A sub-figure in the upper-left corner.}}{151}{figure.caption.98}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces A sub-figure in the upper-right corner.}}{151}{figure.caption.98}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces A sub-figure in the lower-left corner.}}{151}{figure.caption.98}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces A sub-figure in the lower-right corner}}{151}{figure.caption.98}%
+\contentsline {figure}{\numberline {E.1}{\ignorespaces A quadrilateral image example.}}{162}{figure.caption.107}%
+\contentsline {figure}{\numberline {E.2}{\ignorespaces Figures on top of each other. See List.~\ref {lst:figsontop} for the corresponding \LaTeX \ code. }}{164}{figure.caption.109}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces A sub-figure in the top row.}}{164}{figure.caption.109}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces A sub-figure in the middle row.}}{164}{figure.caption.109}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces A sub-figure in the bottom row.}}{164}{figure.caption.109}%
+\contentsline {figure}{\numberline {E.3}{\ignorespaces Four figures in each corner. See List.~\ref {lst:fourfigs} for the corresponding \LaTeX \ code.}}{166}{figure.caption.111}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces A sub-figure in the upper-left corner.}}{166}{figure.caption.111}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces A sub-figure in the upper-right corner.}}{166}{figure.caption.111}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces A sub-figure in the lower-left corner.}}{166}{figure.caption.111}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces A sub-figure in the lower-right corner}}{166}{figure.caption.111}%
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsfinish 

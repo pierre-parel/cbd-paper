@@ -104,6 +104,16 @@ Deepti, R. and Prabadevi, B. (2024).
   detection using yolo and transformer architectures | international journal on
   interactive design and manufacturing (ijidem).
 
+\bibitem[Dosovitskiy et~al.,
+  2021]{Dosovitskiy_Beyer_Kolesnikov_Weissenborn_Zhai_Unterthiner_Dehghani_Minderer_Heigold_Gelly_2021}
+Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X.,
+  Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., Gelly, S.,
+  Uszkoreit, J., and Houlsby, N. (2021).
+\newblock An image is worth 16x16 words: Transformers for image recognition at
+  scale.
+\newblock (arXiv:2010.11929).
+\newblock arXiv:2010.11929 [cs].
+
 \bibitem[García et~al., 2019]{García_Candelo_Becerra_Hoyos_2019}
 García, M., Candelo-Becerra, J.~E., and Hoyos, F.~E. (2019).
 \newblock Quality and defect inspection of green coffee beans using a computer
@@ -188,6 +198,14 @@ Minglani, D., Sharma, A., Pandey, H., Dayal, R., Joshi, J.~B., and Subramaniam,
   S. (2020).
 \newblock A review of granular flow in screw feeders and conveyors.
 \newblock {\em Powder Technology}, 366:369--381.
+
+\bibitem[Muchtar et~al.,
+  2025]{Muchtar_Hafifah_Febriana_Dawood_Ahmadiar_Bahri_Lin_Yohannes_2025}
+Muchtar, K., Hafifah, Y., Febriana, A., Dawood, R., Ahmadiar, A., Bahri, A.,
+  Lin, C.-Y., and Yohannes, E. (2025).
+\newblock Edge ai-based detection for defective coffee beans using deep
+  learning and streamlit framework.
+\newblock {\em IEEE Access}, 13:67977–67992.
 
 \bibitem[Pragathi and Jacob, 2024]{Pragathi_Jacob_2024}
 Pragathi, S.~P. and Jacob, L. (2024).
